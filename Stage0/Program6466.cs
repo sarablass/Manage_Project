@@ -15,7 +15,7 @@
         {
             Console.WriteLine("Enter your name: ");
             string userName = Console.ReadLine();
-            Console.WriteLine("{0}, welcome to my first console application", userName);
+            Console.WriteLine("{0}, welcome to my first console application!", userName);
         }
     }
 }
