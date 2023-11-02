@@ -16,23 +16,34 @@ public class DependencyImplementation : IDependency
         return id; //Returning the new id of the newly added object to the list.
     }
 
-    public void Delete(int id)
-    {
-        throw new NotImplementedException();
-    }
-
+    //A method that requests/receives a single object.
     public Dependency? Read(int id)
     {
-        throw new NotImplementedException();
+        return DataSource.Dependencies.Find(x => x.Id == id);
     }
 
+    //A method that requests/receives all objects of a certain type.
     public List<Dependency> ReadAll()
     {
-        throw new NotImplementedException();
+        return new List<Dependency>(DataSource.Dependencies);
     }
 
+    //A method that updates an existing object.
     public void Update(Dependency item)
     {
-        throw new NotImplementedException();
+        if (Read(item.Id) is null) //Checking if there is an object with the same ID number, in the list.
+            throw new Exception($"Dependency with ID={item.Id} doesn't exist"); //A suitable exception throw.
+        DataSource.Dependencies.Remove(item); //Removes the reference to an existing object from a list.
+
+        DataSource.Dependencies.Add(item); //Added to the list the reference to the updated object received as a parameter.
     }
+
+    //A method that deletes an existing object.
+    public void Delete(int id)
+    {
+        if (Read(id) is null) //Checking if there is an object with the same ID number, in the list.
+            throw new Exception($"Dependency with ID={id} doesn't exist"); //A suitable exception throw.
+        DataSource.Dependencies.Remove(Read(id)); //Deleting the object from the list.
+    }
+
 }
