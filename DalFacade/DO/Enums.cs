@@ -1,5 +1,9 @@
-﻿
-
-namespace DO;
+﻿namespace DO;
 
 
+public enum EngineerExperience
+{
+    expert,
+    junior,
+    rookie
+}
