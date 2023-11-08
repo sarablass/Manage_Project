@@ -47,7 +47,7 @@ public class EngineerImplementation : IEngineer
         {
             if (Read(id) is null) //If it is allowed to delete the entity - check if it exists in the list.
                 throw new Exception($"Engineer with ID={id} doesn't exist"); //A suitable exception throw.
-            DataSource.Engineers.Remove(Read(id)); //Deleting the object from the list.
+            DataSource.Engineers.Remove(Read(id)!); //Deleting the object from the list.
         }
     }
 }

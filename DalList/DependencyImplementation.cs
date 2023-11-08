@@ -37,13 +37,4 @@ public class DependencyImplementation : IDependency
 
         DataSource.Dependencies.Add(item); //Added to the list the reference to the updated object received as a parameter.
     }
-
-    //A method that deletes an existing object.
-    public void Delete(int id)
-    {
-        if (Read(id) is null) //Checking if there is an object with the same ID number, in the list.
-            throw new Exception($"Dependency with ID={id} doesn't exist"); //A suitable exception throw.
-        DataSource.Dependencies.Remove(Read(id)); //Deleting the object from the list.
-    }
-
 }

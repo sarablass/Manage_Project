@@ -48,7 +48,7 @@ public class TaskImplementation : ITask
         {
             if(Read(id) is null) //If it is allowed to delete the entity - check if it exists in the list.
                 throw new Exception($"Task with ID={id} doesn't exist"); //A suitable exception throw.
-            DataSource.Tasks.Remove(Read(id)); //Deleting the object from the list.
+            DataSource.Tasks.Remove(Read(id)!); //Deleting the object from the list.
         }
 
     }

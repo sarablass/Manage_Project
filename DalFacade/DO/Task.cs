@@ -4,7 +4,7 @@
 /// Task entity represents a task with all its props.
 /// </summary>
 /// <param name="Id">Unique task identifier, automatic runner number</param>
-/// <param name="Describtion">Description of the task</param>
+/// <param name="Description">Description of the task</param>
 /// <param name="Alias">Short name of a task</param>
 /// <param name="Milestone">                </param>
 /// <param name="CreatedAt">Task creation date</param>
@@ -19,7 +19,7 @@
 public record Task
 (
     int Id,
-    string Describtion,
+    string Description,
     string Alias,
     bool Milestone,
     DateTime? CreatedAt,
