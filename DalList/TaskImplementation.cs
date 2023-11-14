@@ -5,7 +5,7 @@ using DO;
 using System.Collections.Generic;
 
 //Implementation of the methods of the task entity.
-public class TaskImplementation : ITask
+internal class TaskImplementation : ITask
 {
     //A method that generates a new task.
     public int Create(Task item) 

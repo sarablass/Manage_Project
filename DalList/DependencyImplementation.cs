@@ -4,7 +4,7 @@ using DO;
 using System.Collections.Generic;
 
 //Implementation of the methods of the dependency entity.
-public class DependencyImplementation : IDependency
+internal class DependencyImplementation : IDependency
 {
     //A method that creates a new dependency.
     public int Create(Dependency item)
@@ -36,5 +36,10 @@ public class DependencyImplementation : IDependency
         DataSource.Dependencies.Remove(item); //Removes the reference to an existing object from a list.
 
         DataSource.Dependencies.Add(item); //Added to the list the reference to the updated object received as a parameter.
+    }
+
+    public void Delete(int id)
+    {
+        throw new Exception("You cannot delete an entity of type dependency");
     }
 }
