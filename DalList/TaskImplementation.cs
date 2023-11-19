@@ -12,8 +12,14 @@ internal class TaskImplementation : ITask
     {
         //for entities with auto id
         int id = DataSource.Config.NextTaskId; //Inserting the value of the next running number into the Id variable. 
-        Task copy = item with { Id = id }; //Creating a copy of the new object that arrived as a parameter and updating the id with the new runner number.
-        DataSource.Tasks.Add(copy); //Adding the reference of the copy to the list of objects of type task.
+
+
+        //Task copy = item with { Id = id }; //Creating a copy of the new object that arrived as a parameter and updating the id with the new runner number.
+        //DataSource.Tasks.Add(copy); //Adding the reference of the copy to the list of objects of type task.
+
+
+        Task copy;
+        DataSource.Tasks.Select(copy => copy = item with { Id = id });
         return id; //Returning the new id of the newly added object to the list.
     }
 
