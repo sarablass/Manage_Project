@@ -5,14 +5,16 @@ using System.Diagnostics.Metrics;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
+
 namespace DalTest;
 
 internal class Program
 {
-    private static ITask? s_dalTask = new TaskImplementation();
-    private static IEngineer? s_dalEngineer = new EngineerImplementation();
-    private static IDependency? s_dalDependency = new DependencyImplementation();
+    //private static ITask? s_dalTask = new TaskImplementation();
+    //private static IEngineer? s_dalEngineer = new EngineerImplementation();
+    //private static IDependency? s_dalDependency = new DependencyImplementation();
 
+    static readonly IDal? s_dal = new DalList.DalList();
     public static void EntityTask(char choice)
     {
         switch (choice)
@@ -49,7 +51,7 @@ internal class Program
                 try
                 {
 
-                    s_dalTask!.Create(t);
+                    s_dal!.Task.Create(t);
                 }
                 catch (Exception ex)
                 {
@@ -62,7 +64,7 @@ internal class Program
                 int _id = int.Parse(Console.ReadLine()!);
                 try
                 {
-                    Console.WriteLine(s_dalTask!.Read(_id));
+                    Console.WriteLine(s_dal!.Task.Read(_id));
                 }
                 catch (Exception ex)
                 {
@@ -72,7 +74,7 @@ internal class Program
 
             case 'c'://read all
                 Console.WriteLine("all the tasks:");
-                List<DO.Task> ReadAllTasks = s_dalTask!.ReadAll();
+                List<DO.Task> ReadAllTasks = s_dal!.Task.ReadAll();
                 foreach (var item in ReadAllTasks)
                     Console.WriteLine(item);
                 break;
@@ -82,7 +84,7 @@ internal class Program
                 int _updateId = int.Parse(Console.ReadLine()!); //search of the id to update
                 try
                 {
-                    Console.WriteLine(s_dalTask!.Read(_updateId));
+                    Console.WriteLine(s_dal!.Task.Read(_updateId));
                     Console.WriteLine("enter details to update");
                     Console.WriteLine("enter task's describtion");
                      _description = Console.ReadLine()!;
@@ -109,7 +111,7 @@ internal class Program
                     Console.WriteLine("enter task's level - press 0 for expert,1 for Junior,2 for Rookie");
                     _complexityLevel = (EngineerExperience)int.Parse(Console.ReadLine()!);
                      t = new DO.Task(0, _description, _alias, _milestone, _createdAt, _start, _scheduledDate, _deadline, _complete, _deliverables, _remarks, _engineerld, _complexityLevel);
-                    s_dalTask!.Update(t);
+                    s_dal!.Task.Update(t);
                 }
                 catch (Exception ex)
                 {
@@ -122,7 +124,7 @@ internal class Program
                 _id = int.Parse(Console.ReadLine()!);
                 try
                 {
-                    s_dalTask!.Delete(_id);
+                    s_dal!.Task.Delete(_id);
                 }
                 catch (Exception ex)
                 {
@@ -156,7 +158,7 @@ internal class Program
                 Engineer e = new Engineer(_id, _name, _email, _level, _cost);
                 try
                 {
-                    s_dalEngineer!.Create(e);
+                    s_dal!.Engineer.Create(e);
                 }
                 catch (Exception ex)
                 {
@@ -169,7 +171,7 @@ internal class Program
                 _id = int.Parse(Console.ReadLine()!);
                 try
                 {
-                    Console.WriteLine(s_dalEngineer!.Read(_id));
+                    Console.WriteLine(s_dal!.Engineer.Read(_id));
                 }
                 catch (Exception ex)
                 {
@@ -179,7 +181,7 @@ internal class Program
 
             case 'c'://read all
                 Console.WriteLine("all the engineers:");
-                List<Engineer> ReadAllEngineers = s_dalEngineer!.ReadAll();
+                List<Engineer> ReadAllEngineers = s_dal!.Engineer.ReadAll();
                 foreach (var item in ReadAllEngineers)
                     Console.WriteLine(item);
                 break;
@@ -189,7 +191,7 @@ internal class Program
                 int _updateId = int.Parse(Console.ReadLine()!);//search of the id to update
                 try
                 {
-                    Console.WriteLine(s_dalEngineer!.Read(_updateId));
+                    Console.WriteLine(s_dal!.Engineer.Read(_updateId));
                     _id = _updateId;
                     Console.WriteLine("enter Engineer's name");
                     _name = Console.ReadLine()!;
@@ -200,7 +202,7 @@ internal class Program
                     Console.WriteLine("enter engineer's cost");
                     _cost = double.Parse(Console.ReadLine()!);
                     e = new Engineer(_id, _name, _email, _level, _cost);
-                    s_dalEngineer.Update(e);
+                    s_dal.Engineer.Update(e);
                 }
                 catch (Exception ex)
                 {
@@ -213,7 +215,7 @@ internal class Program
                 int _deleteId = int.Parse(Console.ReadLine()!);
                 try
                 {
-                    s_dalEngineer!.Delete(_deleteId);
+                    s_dal!.Engineer.Delete(_deleteId);
                 }
                 catch (Exception ex)
                 {
@@ -241,7 +243,7 @@ internal class Program
                 Dependency d = new Dependency(0, _idDependentTask, _idDependsOnTask);
                 try
                 {
-                    s_dalDependency?.Create(d);
+                    s_dal?.Dependency.Create(d);
                 }
                 catch (Exception ex)
                 {
@@ -254,7 +256,7 @@ internal class Program
                 int _id = int.Parse(Console.ReadLine()!);
                 try
                 {
-                    Console.WriteLine(s_dalDependency?.Read(_id));
+                    Console.WriteLine(s_dal?.Dependency.Read(_id));
                 }
                 catch (Exception ex)
                 {
@@ -264,7 +266,7 @@ internal class Program
 
             case 'c'://read all
                 Console.WriteLine("all the dependencies:");
-                List<DO.Dependency> ReadAllDependencys = s_dalDependency!.ReadAll();
+                List<DO.Dependency> ReadAllDependencys = s_dal!.Dependency.ReadAll();
                 foreach (var item in ReadAllDependencys)
                     Console.WriteLine(item);
                 break;
@@ -274,14 +276,14 @@ internal class Program
                 int _updateId = int.Parse(Console.ReadLine()!); //search of the id to update
                 try
                 {
-                    Console.WriteLine(s_dalDependency?.Read(_updateId));
+                    Console.WriteLine(s_dal?.Dependency.Read(_updateId));
                     _id = _updateId;
                     Console.WriteLine("enter pending task id number");
                     _idDependentTask = int.Parse(Console.ReadLine()!);
                     Console.WriteLine("enter a previous task id number");
                     _idDependsOnTask = int.Parse(Console.ReadLine()!);
                     Dependency depUpdate = new Dependency(_id, _idDependentTask, _idDependsOnTask);
-                    s_dalDependency!.Update(depUpdate);
+                    s_dal!.Dependency.Update(depUpdate);
                 }
                 catch (Exception ex)
                 {
@@ -296,7 +298,7 @@ internal class Program
 
     static void Main(string[] args)
     {
-        Initialization.Do(s_dalTask, s_dalEngineer, s_dalDependency);
+        Initialization.Do(s_dal);
 
         Console.WriteLine("for Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor exit press 0");
  

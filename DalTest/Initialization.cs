@@ -7,16 +7,18 @@ using System.Xml.Linq;
 
 public static class Initialization
 {
-    private static ITask? s_dalTask;
-    private static IEngineer? s_dalEngineer;
-    private static IDependency? s_dalDependency;
+    //private static ITask? s_dalTask;
+    //private static IEngineer? s_dalEngineer;
+    //private static IDependency? s_dalDependency;
+
     private static readonly Random s_rand = new();
+    private static IDal? s_dal;
 
     private static void createTasks()
     {
         string _description;
         string _alias;
-        List<Engineer> EngineersList = s_dalEngineer!.ReadAll();
+        List<Engineer> EngineersList = s_dal!.Engineer.ReadAll();
 
         (string, string)[] tasks =
         {
@@ -47,7 +49,7 @@ public static class Initialization
                 DateTime Deadline = ScheduledDate.AddMinutes(s_rand.Next(0, 30));
                 DateTime? Complete = Deadline.AddMinutes(s_rand.Next(0, 30));
                 Task newTask = new(0, _description, _alias, false, CreatedAt, Start, ScheduledDate, Deadline, Complete, null, null, EngineersList[i].Id, EngineersList[i].Level);
-                s_dalTask!.Create(newTask);
+                s_dal!.Task.Create(newTask);
             }
         }
     }
@@ -80,7 +82,7 @@ public static class Initialization
             {
                 do
                     _id = s_rand.Next(_min_id, _max_id);
-                while (s_dalEngineer!.Read(_id) != null);
+                while (s_dal!.Engineer.Read(_id) != null);
 
                 _name = engineer.Item1;
                 _email = engineer.Item2;
@@ -89,18 +91,23 @@ public static class Initialization
                 _level = (EngineerExperience)_rand_level;
                 switch (_rand_level)
                 {
-                    case 0: _cost = 1000;
+                    case 0: _cost = 200;
                         break;
 
-                    case 1: _cost = 700;
+                    case 1: _cost = 400;
                         break;
 
-                    case 2: _cost = 400;
+                    case 2: _cost = 700;
                         break;
 
+                    case 3: _cost = 1000;
+                        break;
+
+                    case 4: _cost = 1200;
+                        break;
                 }
                 Engineer newEng = new(_id, _name, _email, _level, _cost);
-                s_dalEngineer!.Create(newEng);
+                s_dal!.Engineer.Create(newEng);
             }
         }
 
@@ -110,7 +117,7 @@ public static class Initialization
         for (int i = 0; i < 250; i++)
         {
             Dependency newDep = new(0, i + 1, i);
-            s_dalDependency!.Create(newDep);
+            s_dal!.Dependency.Create(newDep);
         }
         //int num = 0;
         //List<Task> TasksList = s_dalTask!.ReadAll();
@@ -126,11 +133,13 @@ public static class Initialization
         //}
     }
 
-    public static void Do(ITask? dalTask, IEngineer? dalEngineer, IDependency? dalDependency)
+    public static void Do(IDal? dal)
     {
-        s_dalTask = dalTask ?? throw new NullReferenceException("DAL can not be null!");
-        s_dalEngineer = dalEngineer ?? throw new NullReferenceException("DAL can not be null!");
-        s_dalDependency = dalDependency ?? throw new NullReferenceException("DAL can not be null!");
+        //s_dalTask = dalTask ?? throw new NullReferenceException("DAL can not be null!");
+        //s_dalEngineer = dalEngineer ?? throw new NullReferenceException("DAL can not be null!");
+        //s_dalDependency = dalDependency ?? throw new NullReferenceException("DAL can not be null!");
+
+        s_dal = dal ?? throw new NullReferenceException("DAL object can not be null!"); 
 
         createEngineers();
         createTasks();

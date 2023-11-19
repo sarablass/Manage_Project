@@ -1,7 +1,8 @@
-﻿using DalApi;
-namespace DalList;
+﻿namespace DalList;
+using DalApi;
 
-internal class DalList : IDal
+
+sealed public class DalList : IDal
 {
     public ITask Task => new TaskImplementation();
 
