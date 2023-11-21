@@ -326,7 +326,7 @@ internal class Program
                     break;
             }
            
-            Console.WriteLine("\nfor Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor exit press 0");
+            Console.WriteLine("\nfor Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor exit press 0.");
             select = int.Parse(Console.ReadLine()!);
         }
     }
