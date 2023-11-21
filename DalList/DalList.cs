@@ -1,7 +1,6 @@
 ﻿namespace DalList;
 using DalApi;
 
-
 sealed public class DalList : IDal
 {
     public ITask Task => new TaskImplementation();

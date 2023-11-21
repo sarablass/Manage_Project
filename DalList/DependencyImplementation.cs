@@ -19,27 +19,40 @@ internal class DependencyImplementation : IDependency
     //A method that requests/receives a single object.
     public Dependency? Read(int id)
     {
-        return DataSource.Dependencies.Find(x => x.Id == id);
+        return DataSource.Dependencies.FirstOrDefault(x => x.Id == id);
+    }
+
+    public Dependency? Read(Func<Dependency, bool> filter)
+    {
+        return DataSource.Dependencies.FirstOrDefault(x => filter(x));
     }
 
     //A method that requests/receives all objects of a certain type.
-    public List<Dependency> ReadAll()
+    public IEnumerable<Dependency> ReadAll(Func<Dependency, bool>? filter = null) 
     {
-        return new List<Dependency>(DataSource.Dependencies);
+        if (filter != null)
+        {
+            return from item in DataSource.Dependencies
+                   where filter(item)
+                   select item;
+        }
+        return from item in DataSource.Dependencies
+               select item;
     }
 
     //A method that updates an existing object.
     public void Update(Dependency item)
     {
+        Dependency? removeDependency = Read(item.Id)!;
         if (Read(item.Id) is null) //Checking if there is an object with the same ID number, in the list.
-            throw new Exception($"Dependency with ID={item.Id} doesn't exist"); //A suitable exception throw.
-        DataSource.Dependencies.Remove(item); //Removes the reference to an existing object from a list.
+            throw new DalDoesNotExistException($"Dependency with ID={item.Id} doesn't exist"); //A suitable exception throw.
 
+        DataSource.Dependencies.Remove(removeDependency); //Removes the reference to an existing object from a list.
         DataSource.Dependencies.Add(item); //Added to the list the reference to the updated object received as a parameter.
     }
 
     public void Delete(int id)
     {
-        throw new Exception("You cannot delete an entity of type dependency");
+        throw new DalDeletionImpossible("You cannot delete an entity of type dependency");
     }
 }

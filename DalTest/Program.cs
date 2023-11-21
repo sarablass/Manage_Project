@@ -10,10 +10,6 @@ namespace DalTest;
 
 internal class Program
 {
-    //private static ITask? s_dalTask = new TaskImplementation();
-    //private static IEngineer? s_dalEngineer = new EngineerImplementation();
-    //private static IDependency? s_dalDependency = new DependencyImplementation();
-
     static readonly IDal? s_dal = new DalList.DalList();
     public static void EntityTask(char choice)
     {
@@ -74,7 +70,7 @@ internal class Program
 
             case 'c'://read all
                 Console.WriteLine("all the tasks:");
-                List<DO.Task> ReadAllTasks = s_dal!.Task.ReadAll();
+                IEnumerable<DO.Task> ReadAllTasks = s_dal!.Task.ReadAll()!;
                 foreach (var item in ReadAllTasks)
                     Console.WriteLine(item);
                 break;
@@ -181,7 +177,7 @@ internal class Program
 
             case 'c'://read all
                 Console.WriteLine("all the engineers:");
-                List<Engineer> ReadAllEngineers = s_dal!.Engineer.ReadAll();
+                IEnumerable<Engineer> ReadAllEngineers = s_dal!.Engineer.ReadAll()!;
                 foreach (var item in ReadAllEngineers)
                     Console.WriteLine(item);
                 break;
@@ -266,8 +262,8 @@ internal class Program
 
             case 'c'://read all
                 Console.WriteLine("all the dependencies:");
-                List<DO.Dependency> ReadAllDependencys = s_dal!.Dependency.ReadAll();
-                foreach (var item in ReadAllDependencys)
+                IEnumerable<DO.Dependency> ReadAllDependencies = s_dal!.Dependency.ReadAll()!;
+                foreach (var item in ReadAllDependencies)
                     Console.WriteLine(item);
                 break;
 

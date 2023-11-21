@@ -1,16 +1,13 @@
 ﻿namespace DalTest;
 using DalApi;
 using DO;
+using System.Collections.Generic;
 using System.Net;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 
 public static class Initialization
 {
-    //private static ITask? s_dalTask;
-    //private static IEngineer? s_dalEngineer;
-    //private static IDependency? s_dalDependency;
-
     private static readonly Random s_rand = new();
     private static IDal? s_dal;
 
@@ -18,8 +15,7 @@ public static class Initialization
     {
         string _description;
         string _alias;
-        List<Engineer> EngineersList = s_dal!.Engineer.ReadAll();
-
+      
         (string, string)[] tasks =
         {
             ("Serve the prepared food from the restaurant kitchen to the diners","serve"),
@@ -34,7 +30,6 @@ public static class Initialization
             ("The arrangement of the tables for the diners","arranging tables"),
         };
 
-
         for (int i = 0; i < 10; i++)
         {
 
@@ -48,7 +43,7 @@ public static class Initialization
                 DateTime ScheduledDate = Start.AddMinutes(s_rand.Next(5, 300));
                 DateTime Deadline = ScheduledDate.AddMinutes(s_rand.Next(0, 30));
                 DateTime? Complete = Deadline.AddMinutes(s_rand.Next(0, 30));
-                Task newTask = new(0, _description, _alias, false, CreatedAt, Start, ScheduledDate, Deadline, Complete, null, null, EngineersList[i].Id, EngineersList[i].Level);
+                Task newTask = new(0, _description, _alias, false, CreatedAt, Start, ScheduledDate, Deadline, Complete, null, null, 0, null);
                 s_dal!.Task.Create(newTask);
             }
         }
@@ -119,31 +114,14 @@ public static class Initialization
             Dependency newDep = new(0, i + 1, i);
             s_dal!.Dependency.Create(newDep);
         }
-        //int num = 0;
-        //List<Task> TasksList = s_dalTask!.ReadAll();
-        //for (int i = 0; i < 250; i++)
-        //{
-        //    Dependency newDep = new(0, TasksList[num + 1].Id, TasksList[num].Id);
-        //    s_dalDependency!.Create(newDep);
-        //    num++;
-        //    if (num == 100)
-        //    {
-        //        num = 0;
-        //    }
-        //}
     }
 
     public static void Do(IDal? dal)
     {
-        //s_dalTask = dalTask ?? throw new NullReferenceException("DAL can not be null!");
-        //s_dalEngineer = dalEngineer ?? throw new NullReferenceException("DAL can not be null!");
-        //s_dalDependency = dalDependency ?? throw new NullReferenceException("DAL can not be null!");
-
         s_dal = dal ?? throw new NullReferenceException("DAL object can not be null!"); 
 
         createEngineers();
         createTasks();
         createDependencies();
     }
-
 }
