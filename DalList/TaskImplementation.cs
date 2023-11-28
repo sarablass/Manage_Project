@@ -2,6 +2,7 @@
 using DalApi;
 using DO;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 
 //Implementation of the methods of the task entity.
 internal class TaskImplementation : ITask
@@ -56,14 +57,21 @@ internal class TaskImplementation : ITask
     //A method that deletes an existing object.
     public void Delete(int id)
     {
-        if((DataSource.Dependencies.FirstOrDefault(x => x.DependentTask == id)) is not null) //Checks if the entity is an entity that should not be deleted - checks if there is a dependency to the task.
-            throw new DalDeletionImpossible($"Task with ID={id} cannot be deleted"); //A suitable exception throw.
-        else
-        {
-            if(Read(id) is null) //If it is allowed to delete the entity - check if it exists in the list.
-                throw new DalDoesNotExistException($"Task with ID={id} doesn't exist"); //A suitable exception throw.
-            DataSource.Tasks.Remove(Read(id)!); //Deleting the object from the list.
-        }
+        //if((DataSource.Dependencies.FirstOrDefault(x => x.DependentTask == id)) is not null) //Checks if the entity is an entity that should not be deleted - checks if there is a dependency to the task.
+        //    throw new DalDeletionImpossible($"Task with ID={id} cannot be deleted"); //A suitable exception throw.
+        //else
+        //{
+        //    if(Read(id) is null) //If it is allowed to delete the entity - check if it exists in the list.
+        //        throw new DalDoesNotExistException($"Task with ID={id} doesn't exist"); //A suitable exception throw.
+        //    DataSource.Tasks.Remove(Read(id)!); //Deleting the object from the list.
+        //}
+       
 
+
+        //if (Read(id)!.Active ==true)
+        //{
+        //    Read(id).Active = false;
+        //}
+        throw new DalDeletionImpossible($"Task with ID={id} cannot be deleted"); //A suitable exception throw.
     }
 }

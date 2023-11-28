@@ -53,6 +53,8 @@ internal class DependencyImplementation : IDependency
 
     public void Delete(int id)
     {
-        throw new DalDeletionImpossible("You cannot delete an entity of type dependency");
+            if (Read(id) is null) //checks if it exists in the list.
+                throw new DalDoesNotExistException($"Dependency with ID={id} doesn't exist"); //A suitable exception throw.
+            DataSource.Dependencies.Remove(Read(id)!); //Deleting the object from the list.
     }
 }

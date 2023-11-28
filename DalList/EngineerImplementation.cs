@@ -54,13 +54,21 @@ internal class EngineerImplementation : IEngineer
     //A method that deletes an existing object.
     public void Delete(int id)
     {
-        if ((DataSource.Tasks.FirstOrDefault(x => x.EngineerId == id)) is not null) //Checks if the entity is an entity that must not be deleted - checks if there is an engineer assignment.
-            throw new DalDeletionImpossible($"Engineer with ID={id} cannot be deleted"); //A suitable exception throw.
-        else
-        {
-            if (Read(id) is null) //If it is allowed to delete the entity - check if it exists in the list.
-                throw new DalDoesNotExistException($"Engineer with ID={id} doesn't exist"); //A suitable exception throw.
-            DataSource.Engineers.Remove(Read(id)!); //Deleting the object from the list.
-        }
+        //if ((DataSource.Tasks.FirstOrDefault(x => x.EngineerId == id)) is not null) //Checks if the entity is an entity that must not be deleted - checks if there is an engineer assignment.
+        //    throw new DalDeletionImpossible($"Engineer with ID={id} cannot be deleted"); //A suitable exception throw.
+        //else
+        //{
+        //    if (Read(id) is null) //If it is allowed to delete the entity - check if it exists in the list.
+        //        throw new DalDoesNotExistException($"Engineer with ID={id} doesn't exist"); //A suitable exception throw.
+        //    DataSource.Engineers.Remove(Read(id)!); //Deleting the object from the list.
+        //}
+
+
+
+        //if (Read(id)!.Active ==true)
+        //{
+        //    Read(id).Active = false;
+        //}
+        throw new DalDeletionImpossible($"Engineer with ID={id} cannot be deleted"); //A suitable exception throw.
     }
 }

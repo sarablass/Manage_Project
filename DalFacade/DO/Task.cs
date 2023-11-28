@@ -30,5 +30,6 @@ public record Task
     string? Deliverables,
     string? Remarks,
     int EngineerId,
-    EngineerExperience? ComplexityLevel
+    EngineerExperience? ComplexityLevel,
+    bool Active=true
 );
