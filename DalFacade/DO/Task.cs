@@ -22,6 +22,7 @@ public record Task
     string Description,
     string Alias,
     bool Milestone,
+    double RequiredEffort,
     DateTime? CreatedAt,
     DateTime? Start,
     DateTime? ScheduledDate,
