@@ -19,26 +19,49 @@ internal class EngineerImplementation : IEngineer
     public void Delete(int id)
     {
         throw new DalDeletionImpossible($"Engineer with ID={id} cannot be deleted");
-
     }
 
     public Engineer? Read(int id)
     {
-        throw new NotImplementedException();
+        List<Engineer> engineersList = XMLTools.LoadListFromXMLSerializer<Engineer>("engineers");
+        Engineer? engineer = engineersList.FirstOrDefault(x => x.Id == id);
+        return engineer;
     }
 
     public Engineer? Read(Func<Engineer, bool> filter)
     {
-        throw new NotImplementedException();
+        List<Engineer> engineersList = XMLTools.LoadListFromXMLSerializer<Engineer>("engineers");
+        Engineer? engineer = engineersList.FirstOrDefault(filter);
+        return engineer;
     }
 
     public IEnumerable<Engineer?> ReadAll(Func<Engineer, bool>? filter = null)
     {
-        throw new NotImplementedException();
+        List<Engineer> engineersList = XMLTools.LoadListFromXMLSerializer<Engineer>("engineers");
+
+        if (filter is not null)
+        {
+            IEnumerable<Engineer> engineers = engineersList.Where(filter);
+            if (engineers.Any())
+                return engineers;
+            throw new DalDoesNotExistException($"There is no Engineers to read.");
+        }
+        else
+        {
+            if (engineersList.Any())
+                return engineersList;
+            throw new DalDoesNotExistException($"There is no Engineers to read.");
+        }
     }
 
     public void Update(Engineer item)
     {
-        throw new NotImplementedException();
+        List<Engineer> engineersList = XMLTools.LoadListFromXMLSerializer<Engineer>("engineers");
+        Engineer? engineer = engineersList.FirstOrDefault(x => x.Id == item.Id);
+        if (engineer is null)
+            throw new DalDoesNotExistException($"Engineer with ID={item.Id} doesn't exist"); 
+        engineersList.Remove(engineer);
+        engineersList.Add(item);
+        XMLTools.SaveListToXMLSerializer<Engineer>(engineersList, "engineers");
     }
 }
