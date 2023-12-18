@@ -22,7 +22,7 @@ public record Task
     string Description,
     string Alias,
     bool Milestone,
-    double RequiredEffort,
+    //double RequiredEffort,
     DateTime? CreatedAt,
     DateTime? Start,
     DateTime? ScheduledDate,
@@ -31,6 +31,6 @@ public record Task
     string? Deliverables,
     string? Remarks,
     int EngineerId,
-    EngineerExperience? ComplexityLevel,
+    EngineerExperience? ComplexityLevel=EngineerExperience.AdvancedBeginner,
     bool Active=true
 );
