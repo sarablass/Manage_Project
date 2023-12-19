@@ -16,5 +16,12 @@ public record Engineer
     EngineerExperience? Level,
     double? Cost,
     bool Active = true
-    );
+ )
+
+{
+public Engineer() : this(0, "", "", new EngineerExperience(),0 , true)
+{
+    
+}
+}
 

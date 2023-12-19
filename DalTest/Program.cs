@@ -1,6 +1,7 @@
 ﻿using DalApi;
 using DalList;
 using DO;
+using System.Data.SqlTypes;
 using System.Diagnostics.Metrics;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -10,7 +11,8 @@ namespace DalTest;
 
 internal class Program
 {
-    static readonly IDal? s_dal = new DalList.DalList();
+    //static readonly IDal? s_dal = new DalList.DalList();
+    static readonly IDal? s_dal = new Dal.DalXml();
     public static void EntityTask(char choice)
     {
         switch (choice)
@@ -286,7 +288,18 @@ internal class Program
                     Console.WriteLine(ex);
                 }
                 break;
-
+            case 'e':
+                Console.WriteLine("enter id of dependency to delete");
+                int _deleteId = int.Parse(Console.ReadLine()!);
+                try
+                {
+                    s_dal!.Dependency.Delete(_deleteId);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                break;
             default:
                 break;
         }
@@ -294,10 +307,9 @@ internal class Program
 
     static void Main(string[] args)
     {
-        Initialization.Do(s_dal);
 
-        Console.WriteLine("for Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor exit press 0");
- 
+        Console.WriteLine("for Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor Initialization press 4 \nfor exit press 0 ");
+
         int select = int.Parse(Console.ReadLine()!);
         char choice;
         while (select != 0)
@@ -321,12 +333,17 @@ internal class Program
                     choice = char.Parse(Console.ReadLine()!);
                     EntityDependency(choice);
                     break;
-
+                case 4:
+                    Console.Write("Would you like to create Initial data? (Y/N)"); //stage 3
+                    string? ans = Console.ReadLine() ?? throw new FormatException("Wrong input"); //stage 3
+                    //if (ans == "Y") //stage 3
+                    //    Initialization.Do(s_dal); //stage 2                
+                    break;
                 default:
                     break;
             }
            
-            Console.WriteLine("\nfor Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor exit press 0.");
+            Console.WriteLine("\nfor Task press 1 \nfor Engineer press 2 \nfor Dependency press 3 \nfor Initialization press 4 \nfor exit press 0 ");
             select = int.Parse(Console.ReadLine()!);
         }
     }

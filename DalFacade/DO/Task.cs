@@ -33,4 +33,10 @@ public record Task
     int EngineerId,
     EngineerExperience? ComplexityLevel=EngineerExperience.AdvancedBeginner,
     bool Active=true
-);
+)
+{
+    public Task() : this(0, "", "", true, DateTime.Now, null, null, null, null, "", "", 0, new EngineerExperience(), true)
+    {
+       
+    }
+}
