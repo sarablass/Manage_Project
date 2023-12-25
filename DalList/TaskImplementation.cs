@@ -74,4 +74,9 @@ internal class TaskImplementation : ITask
         //}
         throw new DalDeletionImpossible($"Task with ID={id} cannot be deleted"); //A suitable exception throw.
     }
+
+    public void Reset()
+    {
+        DataSource.Tasks.Clear();
+    }
 }

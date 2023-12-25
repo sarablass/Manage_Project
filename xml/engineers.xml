@@ -4,80 +4,89 @@
 		<Id>329736466</Id>
 		<Name>Dani Levi</Name>
 		<Email>Dani6464@gmail.com</Email>
-		<Level>1</Level>
+		<Level> Novice</Level>
 		<Cost>200.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>325531671</Id>
 		<Name>Sara Blass</Name>
 		<Email>saraBlass@gmail.com</Email>
-		<Level>2</Level>
+		<Level> AdvancedBeginner</Level>
 		<Cost>400.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>214490195</Id>
 		<Name>Brachi Kim</Name>
 		<Email>Brachikim@gmail.com</Email>
-		<Level>3</Level>
+		<Level> Competent</Level>
 		<Cost>700.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>322311317</Id>
 		<Name>Ruti Leybuvi</Name>
 		<Email>ruti@gmail.com</Email>
-		<Level>4</Level>
+		<Level>Proficient</Level>
 		<Cost>1000.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>326202454</Id>
 		<Name>Avraham Cohen</Name>
 		<Email>Avi343@gmail.com</Email>
-		<Level>5</Level>
+		<Level> Expert</Level>
 		<Cost>1200.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>324567866</Id>
 		<Name>Netanel Shochat</Name>
 		<Email>Net323@gmail.com</Email>
-		<Level>1</Level>
+		<Level> Novice</Level>
 		<Cost>200.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>231562896</Id>
 		<Name>Noa Tager</Name>
 		<Email>Noa3254@gmail.com</Email>
-		<Level>2</Level>
+		<Level> AdvancedBeginner</Level>
 		<Cost>400.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>234769342</Id>
 		<Name>Tamar Mitelman</Name>
 		<Email>TamarM910@gmail.com</Email>
-		<Level>3</Level>
+		<Level> Competent</Level>
 		<Cost>700.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>324567876</Id>
 		<Name>Yosef Berko</Name>
 		<Email>yosBerko@gmail.com</Email>
-		<Level>4</Level>
+		<Level>Proficient</Level>
 		<Cost>1000.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
+
 	<Engineer>
 		<Id>231287455</Id>
 		<Name>Motti Golo</Name>
 		<Email>mottigolo2365@gmail.com</Email>
-		<Level>5</Level>
+		<Level> Expert</Level>
 		<Cost>1200.00</Cost>
-		<Active>true</Active>
+		<Active> true </Active>
 	</Engineer>
 </ArrayOfEngineer>

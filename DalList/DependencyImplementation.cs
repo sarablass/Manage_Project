@@ -57,4 +57,9 @@ internal class DependencyImplementation : IDependency
                 throw new DalDoesNotExistException($"Dependency with ID={id} doesn't exist"); //A suitable exception throw.
             DataSource.Dependencies.Remove(Read(id)!); //Deleting the object from the list.
     }
+
+    public void Reset()
+    {
+        DataSource.Dependencies.Clear();
+    }
 }

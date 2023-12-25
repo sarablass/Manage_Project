@@ -22,7 +22,6 @@ public record Task
     string Description,
     string Alias,
     bool Milestone,
-    //double RequiredEffort,
     DateTime? CreatedAt,
     DateTime? Start,
     DateTime? ScheduledDate,
@@ -35,7 +34,7 @@ public record Task
     bool Active=true
 )
 {
-    public Task() : this(0, "", "", true, DateTime.Now, null, null, null, null, "", "", 0, new EngineerExperience(), true)
+    public Task() : this(0, "", "", false, DateTime.Now, null, null, null, null, "", "", 0, new EngineerExperience(), true)
     {
        
     }

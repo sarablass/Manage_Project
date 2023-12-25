@@ -1,6 +1,7 @@
 ﻿using DalApi;
 using DO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace Dal;
 
@@ -55,6 +56,16 @@ internal class TaskImplementation : ITask
                 return tasksList;
             throw new DalDoesNotExistException($"There is no Task to read.");
         }
+    }
+
+    public void Reset()
+    {
+        XElement xmlDataConfig = XMLTools.LoadListFromXMLElement("data-config");
+        xmlDataConfig.Element("NextTaskId")?.SetValue((100).ToString());
+        XMLTools.SaveListToXMLElement(xmlDataConfig, "data-config");
+        List<DO.Task> tasksList = XMLTools.LoadListFromXMLSerializer<DO.Task>("tasks");
+        tasksList.Clear();
+        XMLTools.SaveListToXMLSerializer<DO.Task>(tasksList, "tasks");
     }
 
     public void Update(DO.Task item)

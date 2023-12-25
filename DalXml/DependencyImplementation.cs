@@ -69,6 +69,16 @@ internal class DependencyImplementation : IDependency
         return dependenciesList;
     }
 
+    public void Reset()
+    {
+        XElement xmlDataConfig = XMLTools.LoadListFromXMLElement("data-config");
+        xmlDataConfig.Element("NextDependencyId")?.SetValue((250).ToString());
+        XMLTools.SaveListToXMLElement(xmlDataConfig, "data-config");
+        XElement xmlDependencies = XMLTools.LoadListFromXMLElement("dependencies");
+        xmlDependencies.RemoveAll();
+        XMLTools.SaveListToXMLElement(xmlDependencies, "dependencies");
+    }
+
     public void Update(Dependency item)
     {
         if (Read(item.Id) is null) 

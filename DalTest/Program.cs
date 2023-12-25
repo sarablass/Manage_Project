@@ -152,8 +152,8 @@ internal class Program
                 Console.WriteLine("enter engineer's level - press 0 for expert,1 for Junior,2 for Rookie");
                 EngineerExperience? _level = (EngineerExperience)int.Parse(Console.ReadLine()!);
                 Console.WriteLine("enter engineer's cost");
-                double? _cost = double.Parse(Console.ReadLine()!);
-                Engineer e = new Engineer(_id, _name, _email, _level, _cost);
+                double? _cost = double.Parse(Console.ReadLine()!);              
+                Engineer e = new Engineer(_id, _name, _email, _level, _cost,true);
                 try
                 {
                     s_dal!.Engineer.Create(e);
@@ -199,7 +199,7 @@ internal class Program
                     _level = (EngineerExperience)int.Parse(Console.ReadLine()!);
                     Console.WriteLine("enter engineer's cost");
                     _cost = double.Parse(Console.ReadLine()!);
-                    e = new Engineer(_id, _name, _email, _level, _cost);
+                    e = new Engineer(_id, _name, _email, _level, _cost,true);
                     s_dal.Engineer.Update(e);
                 }
                 catch (Exception ex)
@@ -336,8 +336,8 @@ internal class Program
                 case 4:
                     Console.Write("Would you like to create Initial data? (Y/N)"); //stage 3
                     string? ans = Console.ReadLine() ?? throw new FormatException("Wrong input"); //stage 3
-                    //if (ans == "Y") //stage 3
-                    //    Initialization.Do(s_dal); //stage 2                
+                    if (ans == "Y") //stage 3
+                        Initialization.Do(s_dal); //stage 2                
                     break;
                 default:
                     break;

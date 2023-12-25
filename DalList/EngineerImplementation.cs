@@ -71,4 +71,9 @@ internal class EngineerImplementation : IEngineer
         //}
         throw new DalDeletionImpossible($"Engineer with ID={id} cannot be deleted"); //A suitable exception throw.
     }
+
+    public void Reset()
+    {
+        DataSource.Engineers.Clear();
+    }
 }
