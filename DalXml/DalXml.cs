@@ -1,8 +1,15 @@
 ﻿using DalApi;
+using System.Diagnostics;
+
 namespace Dal;
 
-sealed public class DalXml : IDal
+sealed internal class DalXml : IDal
 {
+    private static readonly Lazy<DalXml> lazyInstance = new Lazy<DalXml>(() => new DalXml(),true);
+    public static IDal Instance => lazyInstance.Value;
+
+    private DalXml() { }
+    
     public ITask Task => new TaskImplementation();
 
     public IEngineer Engineer => new EngineerImplementation();

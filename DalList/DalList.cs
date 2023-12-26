@@ -1,12 +1,35 @@
-﻿namespace DalList;
-using DalApi;
+﻿//namespace DalList;
+//using DalApi;
 
-sealed public class DalList : IDal
+//sealed internal class DalList : IDal
+//{
+//    public static IDal Instance { get; } = new DalList();
+//    private DalList() { }
+//    public ITask Task => new TaskImplementation();
+
+//    public IEngineer Engineer => new EngineerImplementation();
+
+//    public IDependency Dependency => new DependencyImplementation();
+
+//}
+namespace DalList
 {
-    public ITask Task => new TaskImplementation();
+    using DalApi;
+    using System;
 
-    public IEngineer Engineer => new EngineerImplementation();
+    sealed internal class DalList : IDal
+    {
+        private static readonly Lazy<DalList> lazyInstance = new Lazy<DalList>(() => new DalList(),true);
 
-    public IDependency Dependency => new DependencyImplementation();
-   
+        public static IDal Instance => lazyInstance.Value;
+
+        private DalList() { }
+
+        public ITask Task => new TaskImplementation();
+
+        public IEngineer Engineer => new EngineerImplementation();
+
+        public IDependency Dependency => new DependencyImplementation();
+    }
 }
+
