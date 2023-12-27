@@ -65,10 +65,15 @@ internal class EngineerImplementation : IEngineer
     {
         List<Engineer> engineersList = XMLTools.LoadListFromXMLSerializer<Engineer>("engineers");
         Engineer? engineer = engineersList.FirstOrDefault(x => x.Id == item.Id);
-        if (engineer is null)
-            throw new DalDoesNotExistException($"Engineer with ID={item.Id} doesn't exist"); 
-        engineersList.Remove(engineer);
-        engineersList.Add(item);
-        XMLTools.SaveListToXMLSerializer<Engineer>(engineersList, "engineers");
+        if (engineer is not null)
+        {
+            engineersList.Remove(engineer);
+            engineersList.Add(item);
+            XMLTools.SaveListToXMLSerializer<Engineer>(engineersList, "engineers");
+        }
+        else
+        {
+            throw new DalDoesNotExistException($"Engineer with ID={item.Id} doesn't exist");
+        }
     }
 }

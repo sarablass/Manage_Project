@@ -30,6 +30,13 @@ namespace DalList
         public IEngineer Engineer => new EngineerImplementation();
 
         public IDependency Dependency => new DependencyImplementation();
+
+        public void Reset()
+        {
+            Engineer.Reset();
+            Dependency.Reset();
+            Task.Reset();
+        }
     }
 }
 

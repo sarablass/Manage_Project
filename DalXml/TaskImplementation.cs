@@ -72,10 +72,17 @@ internal class TaskImplementation : ITask
     {
         List<DO.Task> tasksList = XMLTools.LoadListFromXMLSerializer<DO.Task>("tasks");
         DO.Task? task = tasksList.FirstOrDefault(x => x.Id == item.Id);
-        if (task is null)
+        if (task is not null)
+        {
+            tasksList.Remove(task);
+            tasksList.Add(item);
+            XMLTools.SaveListToXMLSerializer<DO.Task>(tasksList, "tasks");
+        }
+        else
+        {
             throw new DalDoesNotExistException($"Task with ID={item.Id} doesn't exist");
-        tasksList.Remove(task);
-        tasksList.Add(item);
-        XMLTools.SaveListToXMLSerializer<DO.Task>(tasksList, "tasks");
+        }
+
+       
     }
 }
