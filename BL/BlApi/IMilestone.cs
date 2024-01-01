@@ -1,5 +1,7 @@
 ﻿namespace BlApi;
-
+/// <summary>
+/// 
+/// </summary>
 public interface IMilestone
 {
     public int Create();

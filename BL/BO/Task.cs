@@ -22,11 +22,11 @@ public class Task
     public string? Deliverables { get; set; }//   
     public string? Remarks { get; set; }//
     public TimeSpan? RequiredEffort { get; set; }//
-    public EngineerInTask Engineer { get; set; }
+    public EngineerInTask? Engineer { get; set; }
     //public Tuple<string, string>? Engineer { get; set; }
     public EngineerExperience? ComplexityLevel { get; set; }// 
-
+    public List<TaskInList>? Dependencies { get; set; }
     //public bool IsActive { get; set; }
-    //public List<TaskInList>? Dependencies { get; set; } = null;
+    
     public override string ToString() => this.ToStringProperty();
 }

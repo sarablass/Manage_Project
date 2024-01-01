@@ -1,5 +1,7 @@
 ﻿namespace BlApi;
-
+/// <summary>
+/// 
+/// </summary>
 public interface IEngineer
 {
     public int Create(BO.Engineer boEngineer);

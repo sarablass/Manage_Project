@@ -1,6 +1,8 @@
 ﻿
 namespace BlApi;
-
+/// <summary>
+/// 
+/// </summary>
 public interface ITask
 {
     public int Create(BO.Task item);

@@ -1,4 +1,4 @@
-﻿namespace DalList;
+﻿namespace Dal;
 
 //A class called DataSource in which a list is defined for each entity.
 internal static class DataSource 
