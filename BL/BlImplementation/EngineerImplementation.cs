@@ -78,7 +78,7 @@ internal class EngineerImplementation : IEngineer
     {
         //try?
         Tools.ValidationId(boEngineer.Id);
-        Tools.ValidationName(boEngineer.Name!);
+        Tools.ValidationString(boEngineer.Name!);
         Tools.ValidationEmail(boEngineer.Email!);
         Tools.ValidationCost((double)boEngineer.Cost!);
 

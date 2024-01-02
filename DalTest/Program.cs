@@ -29,6 +29,8 @@ internal class Program
                 string _alias = Console.ReadLine()!;
                 Console.WriteLine("enter milestone");
                 bool _milestone = bool.Parse(Console.ReadLine()!);
+                Console.WriteLine("enter task's requiredeffort");
+                TimeSpan? _requiredEffort = TimeSpan.Parse(Console.ReadLine()!);
                 Console.WriteLine("enter task's date of created");
                 DateTime _createdAt = Convert.ToDateTime(Console.ReadLine());
                 Console.WriteLine("enter task's date of start");
@@ -47,7 +49,7 @@ internal class Program
                 int _engineerld = int.Parse(Console.ReadLine()!);
                 Console.WriteLine("enter task's level - press 0 for expert,1 for Junior,2 for Rookie");
                 EngineerExperience? _complexityLevel = (EngineerExperience)int.Parse(Console.ReadLine()!);
-                DO.Task t = new DO.Task(0, _description, _alias, _milestone, _createdAt, _start, _scheduledDate, _deadline, _complete, _deliverables, _remarks, _engineerld, _complexityLevel);
+                DO.Task t = new DO.Task(0, _description, _alias, _milestone, _requiredEffort, _createdAt, _start, _scheduledDate, _deadline, _complete, _deliverables, _remarks, _engineerld, _complexityLevel);
                 try
                 {
 
@@ -92,6 +94,8 @@ internal class Program
                     _alias = Console.ReadLine()!;
                     Console.WriteLine("enter milestone");
                     _milestone = bool.Parse(Console.ReadLine()!);
+                    Console.WriteLine("enter task's requiredeffort");
+                    _requiredEffort = TimeSpan.Parse(Console.ReadLine()!);
                     Console.WriteLine("enter task's date of created");
                     _createdAt = Convert.ToDateTime(Console.ReadLine());
                     Console.WriteLine("enter task's date of start");
@@ -110,7 +114,7 @@ internal class Program
                     _engineerld = int.Parse(Console.ReadLine()!);
                     Console.WriteLine("enter task's level - press 0 for expert,1 for Junior,2 for Rookie");
                     _complexityLevel = (EngineerExperience)int.Parse(Console.ReadLine()!);
-                     t = new DO.Task(0, _description, _alias, _milestone, _createdAt, _start, _scheduledDate, _deadline, _complete, _deliverables, _remarks, _engineerld, _complexityLevel);
+                     t = new DO.Task(0, _description, _alias, _milestone, _requiredEffort, _createdAt, _start, _scheduledDate, _deadline, _complete, _deliverables, _remarks, _engineerld, _complexityLevel);
                     s_dal!.Task.Update(t);
                 }
                 catch (Exception ex)
