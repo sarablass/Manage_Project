@@ -15,7 +15,6 @@ public class Task
     public DateTime CreateAt { get; set; }//
     public DateTime? BaselineStartDate { get; set; }//
     public DateTime? StartDate { get; set; }//
-    public DateTime? ScheduledDate { get; set; }//
     public DateTime? ForecastDate { get; set; }//
     public DateTime? DeadlineDate { get; set; }//
     public DateTime? CompleteDate { get; set; }//
