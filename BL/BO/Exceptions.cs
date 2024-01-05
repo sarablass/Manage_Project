@@ -28,4 +28,26 @@ public class BlDeletionImpossible : Exception
     public BlDeletionImpossible(string? message) : base(message) { }
 }
 
+[Serializable]
+public class BlReadFailed : Exception
+{
+    public BlReadFailed(string? message) : base(message) { }
+    public BlReadFailed(string message, Exception innerException)
+                : base(message, innerException) { }
+}
+
+[Serializable]
+public class BlInvalidInputException : Exception
+{
+    public BlInvalidInputException(string? message) : base(message) { }
+}
+
+[Serializable]
+public class BlCreatFailed : Exception
+{
+    public BlCreatFailed(string? message) : base(message) { }
+    public BlCreatFailed(string message, Exception innerException)
+                : base(message, innerException) { }
+}
+
 

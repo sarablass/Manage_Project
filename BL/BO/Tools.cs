@@ -17,22 +17,24 @@ public static class Tools
         return str;
     }
 
-
     public static void ValidationId(int id)
     {
-        //if (id < 0)
-        //    throw new BlInvalidInputException($"The id ${id} is not correct");
+        if (id < 0)
+            throw new BlInvalidInputException($"The id ${id} is not correct");
     }
+
     public static void ValidationString(string str)
     {
-        //if (str is null)
-        //    throw new BlInvalidInputException($"The input ${str} is not correct");
+        if (str is null)
+            throw new BlInvalidInputException($"The input ${str} is not correct");
     }
+
     public static void ValidationCost(double cost)
     {
-        //if (cost < 0)
-        //    throw new BlInvalidInputException($"The cost ${cost} is not correct");
+        if (cost < 0)
+            throw new BlInvalidInputException($"The cost ${cost} is not correct");
     }
+
     public static void ValidationEmail(string email)
     {
         // Define a regular expression for basic email validation
@@ -43,9 +45,8 @@ public static class Tools
         Match match = regex.Match(email);
 
         // Return true if the email matches the pattern, false otherwise
-
-        //if( match.Success==false)
-        //    throw new BlInvalidInputException($"The email ${email} is not correct");
+        if (match.Success == false)
+            throw new BlInvalidInputException($"The email ${email} is not correct");
 
     }
 }

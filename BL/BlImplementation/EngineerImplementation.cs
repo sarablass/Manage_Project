@@ -1,7 +1,4 @@
-﻿
-using BlApi;
-using BO;
-
+﻿using BlApi;
 namespace BlImplementation;
 
 internal class EngineerImplementation : IEngineer
@@ -12,10 +9,10 @@ internal class EngineerImplementation : IEngineer
     {
 
         //try?
-        Tools.ValidationId(boEngineer.Id);
-        Tools.ValidationString(boEngineer.Name!);
-        Tools.ValidationEmail(boEngineer.Email!);
-        Tools.ValidationCost((double)boEngineer.Cost!);
+        BO.Tools.ValidationId(boEngineer.Id);
+        BO.Tools.ValidationString(boEngineer.Name!);
+        BO.Tools.ValidationEmail(boEngineer.Email!);
+        BO.Tools.ValidationCost((double)boEngineer.Cost!);
 
         DO.Engineer doEngineer = new DO.Engineer
          (boEngineer.Id, boEngineer.Name!, boEngineer.Email!, (DO.EngineerExperience)boEngineer.Level!, (double)boEngineer.Cost!, boEngineer.IsActive);
@@ -35,7 +32,7 @@ internal class EngineerImplementation : IEngineer
         throw new BO.BlDeletionImpossible($"Engineer with ID={id} cannot be deleted");
     }
 
-    public Engineer? Read(int id)
+    public BO.Engineer? Read(int id)
     {
         DO.Engineer? doEngineer = _dal.Engineer.Read(id);
         if (doEngineer is null)
@@ -54,7 +51,7 @@ internal class EngineerImplementation : IEngineer
         };
     }
 
-    public IEnumerable<BO.Engineer> ReadAll(Func<Engineer, bool>? filter = null)
+    public IEnumerable<BO.Engineer> ReadAll(Func<BO.Engineer, bool>? filter = null)
     {
         IEnumerable<BO.Engineer?> boEngineersList =
            from DO.Engineer doEngineer in _dal.Engineer.ReadAll()
@@ -77,10 +74,10 @@ internal class EngineerImplementation : IEngineer
     public void Update(BO.Engineer boEngineer)
     {
         //try?
-        Tools.ValidationId(boEngineer.Id);
-        Tools.ValidationString(boEngineer.Name!);
-        Tools.ValidationEmail(boEngineer.Email!);
-        Tools.ValidationCost((double)boEngineer.Cost!);
+        BO.Tools.ValidationId(boEngineer.Id);
+        BO.Tools.ValidationString(boEngineer.Name!);
+        BO.Tools.ValidationEmail(boEngineer.Email!);
+        BO.Tools.ValidationCost((double)boEngineer.Cost!);
 
         DO.Engineer doEngineer = new DO.Engineer
          (boEngineer.Id, boEngineer.Name!, boEngineer.Email!, (DO.EngineerExperience)boEngineer.Level!, (double)boEngineer.Cost!, boEngineer.IsActive);
@@ -88,9 +85,9 @@ internal class EngineerImplementation : IEngineer
         {
             _dal.Engineer.Update(doEngineer);
         }
-        catch (DO.DalAlreadyExistsException ex)
+        catch (DO.DalDoesNotExistException ex)
         {
-            throw new BO.BlAlreadyExistsException($"Engineer with ID={boEngineer.Id} already exists", ex);
+            throw new BO.BlDoesNotExistException(ex.Message);
         }
     }
 }

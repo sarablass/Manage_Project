@@ -1,14 +1,10 @@
-﻿
-using BlApi;
-
-
-
+﻿using BlApi;
 namespace BlImplementation;
 
 internal class TaskImplementation : ITask
 {
     private DalApi.IDal _dal = DalApi.Factory.Get;
-    private BO.MilestoneInTask? calculateMilestone(DO.Task doTask)
+    private BO.MilestoneInTask? CalculateMilestone(DO.Task doTask)
     {
         DO.Dependency? dependency = _dal.Dependency.ReadAll(dep => dep.DependsOnTask == doTask.Id && _dal.Task.Read(dep.DependentTask)!.Milestone).FirstOrDefault();
         if (dependency is null)
@@ -102,7 +98,7 @@ internal class TaskImplementation : ITask
             Id = doTask.Id,
             Description = doTask.Description,
             Alias = doTask.Alias,
-            Milestone = calculateMilestone(doTask),
+            Milestone = CalculateMilestone(doTask),
             Status = CalculateStatus(doTask),
             CreateAt = (DateTime)doTask.CreatedAt!,
             BaselineStartDate =doTask.ScheduledDate,
@@ -128,7 +124,7 @@ internal class TaskImplementation : ITask
                Id = doTask.Id,
                Description = doTask.Description,
                Alias = doTask.Alias,
-               Milestone = calculateMilestone(doTask),
+               Milestone = CalculateMilestone(doTask),
                Status = CalculateStatus(doTask),
                CreateAt = (DateTime)doTask.CreatedAt!,
                BaselineStartDate = doTask.ScheduledDate,
@@ -148,8 +144,20 @@ internal class TaskImplementation : ITask
         return tasksList.Where(filter!)!;
     }
 
-    public void Update(BO.Task item)
+    public void Update(BO.Task boTask)
     {
-        throw new NotImplementedException();
+        BO.Tools.ValidationId(boTask.Id);
+        BO.Tools.ValidationString(boTask.Alias!);
+
+        DO.Task doTask = new DO.Task
+        (boTask.Id, boTask.Description, boTask.Alias, false, boTask.CompleteDate - boTask.StartDate, boTask.CreateAt, boTask.StartDate, boTask.BaselineStartDate, boTask.DeadlineDate, boTask.CompleteDate, boTask.Deliverables, boTask.Remarks, boTask.Engineer!.Id, (DO.EngineerExperience)boTask.ComplexityLevel!, boTask.IsActive);
+        try
+        {
+            _dal.Task.Update(doTask);
+        }
+        catch (DO.DalDoesNotExistException ex)
+        {
+            throw new BO.BlDoesNotExistException(ex.Message);
+        }
     }
 }
