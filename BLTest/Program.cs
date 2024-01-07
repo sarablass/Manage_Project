@@ -26,15 +26,13 @@ namespace BLTest
                     bool.TryParse(Console.ReadLine() ?? throw new Exception("enter a number"), out bool _isActive);
                     Console.WriteLine("enter engineer's email");
                     string _email = Console.ReadLine()!;
-                    Console.WriteLine("enter engineer's level - press 0 for expert,1 for Junior,2 for Rookie");
-                    BO.EngineerExperience? _level = (BO.EngineerExperience)int.Parse(Console.ReadLine()!);
                     Console.WriteLine("enter engineer's cost");
                     double.TryParse(Console.ReadLine() ?? throw new Exception("enter a number"), out double _cost);
                     try
                     {
                         Console.WriteLine("enter engineer's level - press 0 for expert,1 for Junior,2 for Rookie");
-                        int level = int.Parse(Console.ReadLine()!);
-                        if (!Enum.TryParse(level.ToString(), out BO.EngineerExperience engineerLevel))
+                        int engineerLevel = int.Parse(Console.ReadLine()!);
+                        if (!Enum.TryParse(engineerLevel.ToString(), out BO.EngineerExperience _level))
                             throw new BO.BlIllegalException("enter engineer's level - press 0 for expert,1 for Junior,2 for Rookie");
 
                         BO.Engineer newEngineer = new BO.Engineer()

@@ -24,7 +24,13 @@ internal class MilestoneImplementation : IMilestone
 
     public int Create()
     {
-        throw new NotImplementedException();
+        var groupedDependencies = _dal.Dependency.ReadAll()
+        .GroupBy(d => d?.DependentTask)
+        .OrderBy(group => group.Key)
+        .Select(group => (group.Key, group.Select(d => d!.DependsOnTask).ToList()))
+        .ToList();
+
+
     }
 
     public BO.Milestone? Read(int id)

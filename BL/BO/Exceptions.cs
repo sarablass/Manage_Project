@@ -50,4 +50,10 @@ public class BlCreatFailed : Exception
                 : base(message, innerException) { }
 }
 
-
+[Serializable]
+public class BlIllegalException : Exception
+{
+    public BlIllegalException(string? message) : base(message) { }
+    public BlIllegalException(string message, Exception innerException)
+                : base(message, innerException) { }
+}
