@@ -26,7 +26,12 @@ namespace PL
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnEngineers_Click(object sender, RoutedEventArgs e)
+        {
+            new EngineerListWindow().Show();
+        }
+
+        private void btnInitialization_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult answer = MessageBox.Show("Are you sure you want to initialize?", "initialize", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
@@ -34,12 +39,6 @@ namespace PL
             {
                 DalTest.Initialization.Do();
             }
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            EngineerListWindow newWindow = new EngineerListWindow();
-            newWindow.Show();
         }
     }
 }

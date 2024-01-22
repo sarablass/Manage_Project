@@ -48,7 +48,7 @@ internal class TaskImplementation : ITask
             IEnumerable<DO.Task> tasks = tasksList.Where(filter);
             if (tasks.Any())
                 return tasks;
-            throw new DalDoesNotExistException($"There is no Task to read.");
+            throw new DalDoesNotExistException($"There is no Task to read."); //מביא לנו tasks ריק לבדוק!!!!!!!!!
         }
         else
         {

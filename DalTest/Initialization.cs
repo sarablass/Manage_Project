@@ -30,20 +30,22 @@ public static class Initialization
             ("The arrangement of the tables for the diners","arranging tables"),
         };
 
+
+        var engineers = s_dal!.Engineer!.ReadAll().ToList();
         for (int i = 0; i < 10; i++)
         {
-
-
             foreach (var task in tasks)
             {
                 _description = task.Item1;
                 _alias = task.Item2;
-                DateTime CreatedAt = DateTime.Now;
-                DateTime Start = CreatedAt.AddDays(s_rand.Next(0, 7));
-                DateTime ScheduledDate = Start.AddMinutes(s_rand.Next(5, 300));
-                DateTime Deadline = ScheduledDate.AddMinutes(s_rand.Next(0, 30));
-                DateTime? Complete = Deadline.AddMinutes(s_rand.Next(0, 30));
-                Task newTask = new(0, _description, _alias, false,null, CreatedAt, Start, ScheduledDate, Deadline, Complete, null, null, 0, null,true);
+                DateTime _createdAt = DateTime.Now;
+                DateTime _start = _createdAt.AddDays(s_rand.Next(0, 7));
+                DateTime _scheduledDate = _start.AddMinutes(s_rand.Next(5, 300));
+                DateTime _deadline = _scheduledDate.AddMinutes(s_rand.Next(0, 30));
+                DateTime? _complete = _deadline.AddMinutes(s_rand.Next(0, 30));
+                int randIndex = s_rand.Next(0, engineers.Count);
+                int _engineerId = engineers[randIndex]?.Id ?? 0;
+                Task newTask = new(0, _description, _alias, false,null, _createdAt, _start, _scheduledDate, _deadline, _complete, null, null, _engineerId, null,true);
                 s_dal!.Task.Create(newTask);
             }
         }

@@ -55,7 +55,7 @@ internal class EngineerImplementation : IEngineer
     {
         IEnumerable<BO.Engineer?> boEngineersList =
            from DO.Engineer doEngineer in _dal.Engineer.ReadAll()
-           let task = _dal.Task.ReadAll().FirstOrDefault(task => task?.EngineerId == doEngineer.Id)
+           let task = _dal.Task.ReadAll(task => task?.EngineerId == doEngineer.Id).FirstOrDefault()
            select new BO.Engineer()
            {
                Id = doEngineer.Id,
