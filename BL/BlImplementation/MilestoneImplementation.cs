@@ -30,7 +30,7 @@ internal class MilestoneImplementation : IMilestone
         .Select(group => (group.Key, group.Select(d => d!.DependsOnTask).ToList()))
         .ToList();
 
-
+        return 1;
     }
 
     public BO.Milestone? Read(int id)

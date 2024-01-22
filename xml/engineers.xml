@@ -1,92 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfEngineer>
-	<Engineer>
-		<Id>329736466</Id>
-		<Name>Dani Levi</Name>
-		<Email>Dani6464@gmail.com</Email>
-		<Level> Novice</Level>
-		<Cost>200.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>325531671</Id>
-		<Name>Sara Blass</Name>
-		<Email>saraBlass@gmail.com</Email>
-		<Level> AdvancedBeginner</Level>
-		<Cost>400.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>214490195</Id>
-		<Name>Brachi Kim</Name>
-		<Email>Brachikim@gmail.com</Email>
-		<Level> Competent</Level>
-		<Cost>700.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>322311317</Id>
-		<Name>Ruti Leybuvi</Name>
-		<Email>ruti@gmail.com</Email>
-		<Level>Proficient</Level>
-		<Cost>1000.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>326202454</Id>
-		<Name>Avraham Cohen</Name>
-		<Email>Avi343@gmail.com</Email>
-		<Level> Expert</Level>
-		<Cost>1200.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>324567866</Id>
-		<Name>Netanel Shochat</Name>
-		<Email>Net323@gmail.com</Email>
-		<Level> Novice</Level>
-		<Cost>200.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>231562896</Id>
-		<Name>Noa Tager</Name>
-		<Email>Noa3254@gmail.com</Email>
-		<Level> AdvancedBeginner</Level>
-		<Cost>400.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>234769342</Id>
-		<Name>Tamar Mitelman</Name>
-		<Email>TamarM910@gmail.com</Email>
-		<Level> Competent</Level>
-		<Cost>700.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>324567876</Id>
-		<Name>Yosef Berko</Name>
-		<Email>yosBerko@gmail.com</Email>
-		<Level>Proficient</Level>
-		<Cost>1000.00</Cost>
-		<Active> true </Active>
-	</Engineer>
-
-	<Engineer>
-		<Id>231287455</Id>
-		<Name>Motti Golo</Name>
-		<Email>mottigolo2365@gmail.com</Email>
-		<Level> Expert</Level>
-		<Cost>1200.00</Cost>
-		<Active> true </Active>
-	</Engineer>
+<ArrayOfEngineer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Engineer>
+    <Id>324456475</Id>
+    <Name>Dani Levi</Name>
+    <Email>Dani6464@gmail.com</Email>
+    <Level>Beginner</Level>
+    <Cost>200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>323889149</Id>
+    <Name>Sara Blass</Name>
+    <Email>saraBlass@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>236984419</Id>
+    <Name>Brachi Kim</Name>
+    <Email>Brachikim@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>300147693</Id>
+    <Name>Ruti Leybuvi</Name>
+    <Email>ruti@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>307228792</Id>
+    <Name>Avraham Cohen</Name>
+    <Email>Avi343@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>396420958</Id>
+    <Name>Netanel Shochat</Name>
+    <Email>Net323@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>310380969</Id>
+    <Name>Noa Tager</Name>
+    <Email>Noa3254@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>212972256</Id>
+    <Name>Tamar Mitelman</Name>
+    <Email>TamarM910@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>292084413</Id>
+    <Name>Yosef Berko</Name>
+    <Email>yosBerko@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>338500520</Id>
+    <Name>Motti Golo</Name>
+    <Email>mottigolo2365@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>285307139</Id>
+    <Name>Dani Levi</Name>
+    <Email>Dani6464@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>200317640</Id>
+    <Name>Sara Blass</Name>
+    <Email>saraBlass@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>393428551</Id>
+    <Name>Brachi Kim</Name>
+    <Email>Brachikim@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>326147482</Id>
+    <Name>Ruti Leybuvi</Name>
+    <Email>ruti@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>312654294</Id>
+    <Name>Avraham Cohen</Name>
+    <Email>Avi343@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>222213150</Id>
+    <Name>Netanel Shochat</Name>
+    <Email>Net323@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>285726761</Id>
+    <Name>Noa Tager</Name>
+    <Email>Noa3254@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>266994059</Id>
+    <Name>Tamar Mitelman</Name>
+    <Email>TamarM910@gmail.com</Email>
+    <Level>Beginner</Level>
+    <Cost>200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>381424932</Id>
+    <Name>Yosef Berko</Name>
+    <Email>yosBerko@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>359700760</Id>
+    <Name>Motti Golo</Name>
+    <Email>mottigolo2365@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>302555283</Id>
+    <Name>Dani Levi</Name>
+    <Email>Dani6464@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>236345472</Id>
+    <Name>Sara Blass</Name>
+    <Email>saraBlass@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>302317078</Id>
+    <Name>Brachi Kim</Name>
+    <Email>Brachikim@gmail.com</Email>
+    <Level>Beginner</Level>
+    <Cost>200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>333795708</Id>
+    <Name>Ruti Leybuvi</Name>
+    <Email>ruti@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>243500472</Id>
+    <Name>Avraham Cohen</Name>
+    <Email>Avi343@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>351139305</Id>
+    <Name>Netanel Shochat</Name>
+    <Email>Net323@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>386244463</Id>
+    <Name>Noa Tager</Name>
+    <Email>Noa3254@gmail.com</Email>
+    <Level>Beginner</Level>
+    <Cost>200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>352108653</Id>
+    <Name>Tamar Mitelman</Name>
+    <Email>TamarM910@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>347126340</Id>
+    <Name>Yosef Berko</Name>
+    <Email>yosBerko@gmail.com</Email>
+    <Level>Beginner</Level>
+    <Cost>200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>268449179</Id>
+    <Name>Motti Golo</Name>
+    <Email>mottigolo2365@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>391258602</Id>
+    <Name>Dani Levi</Name>
+    <Email>Dani6464@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>315871160</Id>
+    <Name>Sara Blass</Name>
+    <Email>saraBlass@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>302261827</Id>
+    <Name>Brachi Kim</Name>
+    <Email>Brachikim@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>399574172</Id>
+    <Name>Ruti Leybuvi</Name>
+    <Email>ruti@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>381023770</Id>
+    <Name>Avraham Cohen</Name>
+    <Email>Avi343@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>283663045</Id>
+    <Name>Netanel Shochat</Name>
+    <Email>Net323@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>311410194</Id>
+    <Name>Noa Tager</Name>
+    <Email>Noa3254@gmail.com</Email>
+    <Level>Expert</Level>
+    <Cost>1200</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>233762001</Id>
+    <Name>Tamar Mitelman</Name>
+    <Email>TamarM910@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>295365579</Id>
+    <Name>Yosef Berko</Name>
+    <Email>yosBerko@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>400</Cost>
+    <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>208414263</Id>
+    <Name>Motti Golo</Name>
+    <Email>mottigolo2365@gmail.com</Email>
+    <Level>Advanced</Level>
+    <Cost>1000</Cost>
+    <Active>true</Active>
+  </Engineer>
 </ArrayOfEngineer>

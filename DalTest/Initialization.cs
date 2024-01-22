@@ -43,7 +43,7 @@ public static class Initialization
                 DateTime ScheduledDate = Start.AddMinutes(s_rand.Next(5, 300));
                 DateTime Deadline = ScheduledDate.AddMinutes(s_rand.Next(0, 30));
                 DateTime? Complete = Deadline.AddMinutes(s_rand.Next(0, 30));
-                Task newTask = new(0, _description, _alias, false, CreatedAt, Start, ScheduledDate, Deadline, Complete, null, null, 0, null,true);
+                Task newTask = new(0, _description, _alias, false,null, CreatedAt, Start, ScheduledDate, Deadline, Complete, null, null, 0, null,true);
                 s_dal!.Task.Create(newTask);
             }
         }

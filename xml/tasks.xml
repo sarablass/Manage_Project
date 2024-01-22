@@ -1,144 +1,1701 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfTask>
-	<Task>
-		<Id>1</Id>
-		<Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
-		<Alias>serve</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>329736466</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>2</Id>
-		<Description>Preparation of dough for all types of bread</Description>
-		<Alias>baker</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>325531671</EngineerId>
-		<Active>true</Active>
-	</Task>
-	<Task>
-		<Id>3</Id>
-		<Description>Chopping the vegetables for all types of salads</Description>
-		<Alias>cutting vegetables</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>322311317</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>4</Id>
-		<Description>Washing the dirty dishes that come back from the diners</Description>
-		<Alias>dishwashing</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>214490195</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>5</Id>
-		<Description>Washing the dirty floors</Description>
-		<Alias>washing floors</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>326202454</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>6</Id>
-		<Description>The seasoning of the various dishes in the restaurant</Description>
-		<Alias>seasoning</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>324567866</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>7</Id>
-		<Description>to plate the dishes served to the diners</Description>
-		<Alias>plate</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>231562896</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>8</Id>
-		<Description>Reading the orders from the diners</Description>
-		<Alias>reading</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>234769342</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>9</Id>
-		<Description>Welcoming guests to the restaurant</Description>
-		<Alias>Hospitality</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>324567876</EngineerId>
-		<Active>true</Active>
-	</Task>
-
-	<Task>
-		<Id>10</Id>
-		<Description>The arrangement of the tables for the diners</Description>
-		<Alias>arranging tables</Alias>
-		<Milestone>false</Milestone>
-		<CreatedAt>2023-11-30T06:19:20.3141859+02:00</CreatedAt>
-		<Start>2023-12-01T02:19:20.322507+02:00</Start>
-		<ScheduledDate>2023-12-03T08:19:20.3225382+02:00</ScheduledDate>
-		<Deadline>2023-12-06T02:19:20.3225409+02:00</Deadline>
-		<Complete>2023-12-07T08:19:20.3225424+02:00</Complete>
-		<EngineerId>231287455</EngineerId>
-		<Active>true</Active>
-	</Task>
-
+<ArrayOfTask xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Task>
+    <Id>100</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5149723+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.5149723+02:00</Start>
+    <ScheduledDate>2024-01-28T17:26:56.5149723+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:34:56.5149723+02:00</Deadline>
+    <Complete>2024-01-28T17:49:56.5149723+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>101</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5263925+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.5263925+02:00</Start>
+    <ScheduledDate>2024-01-24T18:56:56.5263925+02:00</ScheduledDate>
+    <Deadline>2024-01-24T19:17:56.5263925+02:00</Deadline>
+    <Complete>2024-01-24T19:40:56.5263925+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>102</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5330319+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.5330319+02:00</Start>
+    <ScheduledDate>2024-01-24T16:30:56.5330319+02:00</ScheduledDate>
+    <Deadline>2024-01-24T16:52:56.5330319+02:00</Deadline>
+    <Complete>2024-01-24T17:08:56.5330319+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>103</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5350117+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.5350117+02:00</Start>
+    <ScheduledDate>2024-01-22T19:00:56.5350117+02:00</ScheduledDate>
+    <Deadline>2024-01-22T19:28:56.5350117+02:00</Deadline>
+    <Complete>2024-01-22T19:34:56.5350117+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>104</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.536559+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.536559+02:00</Start>
+    <ScheduledDate>2024-01-26T15:13:56.536559+02:00</ScheduledDate>
+    <Deadline>2024-01-26T15:30:56.536559+02:00</Deadline>
+    <Complete>2024-01-26T15:40:56.536559+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>105</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5380635+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.5380635+02:00</Start>
+    <ScheduledDate>2024-01-25T17:48:56.5380635+02:00</ScheduledDate>
+    <Deadline>2024-01-25T18:12:56.5380635+02:00</Deadline>
+    <Complete>2024-01-25T18:29:56.5380635+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>106</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5396929+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.5396929+02:00</Start>
+    <ScheduledDate>2024-01-28T15:34:56.5396929+02:00</ScheduledDate>
+    <Deadline>2024-01-28T15:57:56.5396929+02:00</Deadline>
+    <Complete>2024-01-28T15:59:56.5396929+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>107</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5412794+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.5412794+02:00</Start>
+    <ScheduledDate>2024-01-27T19:04:56.5412794+02:00</ScheduledDate>
+    <Deadline>2024-01-27T19:23:56.5412794+02:00</Deadline>
+    <Complete>2024-01-27T19:44:56.5412794+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>108</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5429143+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.5429143+02:00</Start>
+    <ScheduledDate>2024-01-23T18:54:56.5429143+02:00</ScheduledDate>
+    <Deadline>2024-01-23T19:23:56.5429143+02:00</Deadline>
+    <Complete>2024-01-23T19:42:56.5429143+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>109</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5446987+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.5446987+02:00</Start>
+    <ScheduledDate>2024-01-23T19:18:56.5446987+02:00</ScheduledDate>
+    <Deadline>2024-01-23T19:47:56.5446987+02:00</Deadline>
+    <Complete>2024-01-23T19:59:56.5446987+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>110</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5466268+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.5466268+02:00</Start>
+    <ScheduledDate>2024-01-28T18:37:56.5466268+02:00</ScheduledDate>
+    <Deadline>2024-01-28T19:06:56.5466268+02:00</Deadline>
+    <Complete>2024-01-28T19:09:56.5466268+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>111</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5484899+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.5484899+02:00</Start>
+    <ScheduledDate>2024-01-27T15:31:56.5484899+02:00</ScheduledDate>
+    <Deadline>2024-01-27T15:38:56.5484899+02:00</Deadline>
+    <Complete>2024-01-27T15:53:56.5484899+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>112</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5505144+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.5505144+02:00</Start>
+    <ScheduledDate>2024-01-22T16:37:56.5505144+02:00</ScheduledDate>
+    <Deadline>2024-01-22T17:05:56.5505144+02:00</Deadline>
+    <Complete>2024-01-22T17:26:56.5505144+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>113</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5526114+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.5526114+02:00</Start>
+    <ScheduledDate>2024-01-22T18:39:56.5526114+02:00</ScheduledDate>
+    <Deadline>2024-01-22T18:47:56.5526114+02:00</Deadline>
+    <Complete>2024-01-22T19:11:56.5526114+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>114</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5547449+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.5547449+02:00</Start>
+    <ScheduledDate>2024-01-27T18:44:56.5547449+02:00</ScheduledDate>
+    <Deadline>2024-01-27T19:03:56.5547449+02:00</Deadline>
+    <Complete>2024-01-27T19:04:56.5547449+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>115</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5568902+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.5568902+02:00</Start>
+    <ScheduledDate>2024-01-24T17:56:56.5568902+02:00</ScheduledDate>
+    <Deadline>2024-01-24T18:17:56.5568902+02:00</Deadline>
+    <Complete>2024-01-24T18:28:56.5568902+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>116</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5595463+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.5595463+02:00</Start>
+    <ScheduledDate>2024-01-23T16:27:56.5595463+02:00</ScheduledDate>
+    <Deadline>2024-01-23T16:38:56.5595463+02:00</Deadline>
+    <Complete>2024-01-23T16:45:56.5595463+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>117</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5619055+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.5619055+02:00</Start>
+    <ScheduledDate>2024-01-24T17:03:56.5619055+02:00</ScheduledDate>
+    <Deadline>2024-01-24T17:32:56.5619055+02:00</Deadline>
+    <Complete>2024-01-24T17:43:56.5619055+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>118</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5643122+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.5643122+02:00</Start>
+    <ScheduledDate>2024-01-23T19:02:56.5643122+02:00</ScheduledDate>
+    <Deadline>2024-01-23T19:21:56.5643122+02:00</Deadline>
+    <Complete>2024-01-23T19:23:56.5643122+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>119</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5672421+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.5672421+02:00</Start>
+    <ScheduledDate>2024-01-22T16:43:56.5672421+02:00</ScheduledDate>
+    <Deadline>2024-01-22T17:03:56.5672421+02:00</Deadline>
+    <Complete>2024-01-22T17:16:56.5672421+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>120</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5696844+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.5696844+02:00</Start>
+    <ScheduledDate>2024-01-23T19:31:56.5696844+02:00</ScheduledDate>
+    <Deadline>2024-01-23T19:41:56.5696844+02:00</Deadline>
+    <Complete>2024-01-23T19:59:56.5696844+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>121</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5722607+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.5722607+02:00</Start>
+    <ScheduledDate>2024-01-26T18:47:56.5722607+02:00</ScheduledDate>
+    <Deadline>2024-01-26T19:07:56.5722607+02:00</Deadline>
+    <Complete>2024-01-26T19:21:56.5722607+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>122</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5754157+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.5754157+02:00</Start>
+    <ScheduledDate>2024-01-26T17:07:56.5754157+02:00</ScheduledDate>
+    <Deadline>2024-01-26T17:24:56.5754157+02:00</Deadline>
+    <Complete>2024-01-26T17:27:56.5754157+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>123</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5782859+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.5782859+02:00</Start>
+    <ScheduledDate>2024-01-25T15:32:56.5782859+02:00</ScheduledDate>
+    <Deadline>2024-01-25T15:41:56.5782859+02:00</Deadline>
+    <Complete>2024-01-25T15:44:56.5782859+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>124</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5817445+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.5817445+02:00</Start>
+    <ScheduledDate>2024-01-24T18:55:56.5817445+02:00</ScheduledDate>
+    <Deadline>2024-01-24T18:57:56.5817445+02:00</Deadline>
+    <Complete>2024-01-24T19:02:56.5817445+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>125</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5847718+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.5847718+02:00</Start>
+    <ScheduledDate>2024-01-28T16:56:56.5847718+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:08:56.5847718+02:00</Deadline>
+    <Complete>2024-01-28T17:31:56.5847718+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>126</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5889215+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.5889215+02:00</Start>
+    <ScheduledDate>2024-01-22T19:24:56.5889215+02:00</ScheduledDate>
+    <Deadline>2024-01-22T19:39:56.5889215+02:00</Deadline>
+    <Complete>2024-01-22T19:53:56.5889215+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>127</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5916569+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.5916569+02:00</Start>
+    <ScheduledDate>2024-01-27T17:50:56.5916569+02:00</ScheduledDate>
+    <Deadline>2024-01-27T17:57:56.5916569+02:00</Deadline>
+    <Complete>2024-01-27T18:18:56.5916569+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>128</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5945026+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.5945026+02:00</Start>
+    <ScheduledDate>2024-01-28T17:27:56.5945026+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:28:56.5945026+02:00</Deadline>
+    <Complete>2024-01-28T17:56:56.5945026+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>129</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.5978528+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.5978528+02:00</Start>
+    <ScheduledDate>2024-01-24T16:29:56.5978528+02:00</ScheduledDate>
+    <Deadline>2024-01-24T16:38:56.5978528+02:00</Deadline>
+    <Complete>2024-01-24T16:52:56.5978528+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>130</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6010824+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.6010824+02:00</Start>
+    <ScheduledDate>2024-01-27T15:16:56.6010824+02:00</ScheduledDate>
+    <Deadline>2024-01-27T15:16:56.6010824+02:00</Deadline>
+    <Complete>2024-01-27T15:40:56.6010824+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>131</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6039346+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.6039346+02:00</Start>
+    <ScheduledDate>2024-01-26T15:42:56.6039346+02:00</ScheduledDate>
+    <Deadline>2024-01-26T16:06:56.6039346+02:00</Deadline>
+    <Complete>2024-01-26T16:08:56.6039346+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>132</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6070248+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.6070248+02:00</Start>
+    <ScheduledDate>2024-01-26T16:36:56.6070248+02:00</ScheduledDate>
+    <Deadline>2024-01-26T16:38:56.6070248+02:00</Deadline>
+    <Complete>2024-01-26T16:46:56.6070248+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>133</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6102889+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.6102889+02:00</Start>
+    <ScheduledDate>2024-01-24T17:13:56.6102889+02:00</ScheduledDate>
+    <Deadline>2024-01-24T17:23:56.6102889+02:00</Deadline>
+    <Complete>2024-01-24T17:25:56.6102889+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>134</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6137183+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.6137183+02:00</Start>
+    <ScheduledDate>2024-01-28T18:52:56.6137183+02:00</ScheduledDate>
+    <Deadline>2024-01-28T18:57:56.6137183+02:00</Deadline>
+    <Complete>2024-01-28T19:21:56.6137183+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>135</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6170479+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.6170479+02:00</Start>
+    <ScheduledDate>2024-01-23T18:50:56.6170479+02:00</ScheduledDate>
+    <Deadline>2024-01-23T18:51:56.6170479+02:00</Deadline>
+    <Complete>2024-01-23T19:00:56.6170479+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>136</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.620369+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.620369+02:00</Start>
+    <ScheduledDate>2024-01-24T15:18:56.620369+02:00</ScheduledDate>
+    <Deadline>2024-01-24T15:32:56.620369+02:00</Deadline>
+    <Complete>2024-01-24T15:49:56.620369+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>137</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6238734+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.6238734+02:00</Start>
+    <ScheduledDate>2024-01-24T15:54:56.6238734+02:00</ScheduledDate>
+    <Deadline>2024-01-24T16:09:56.6238734+02:00</Deadline>
+    <Complete>2024-01-24T16:11:56.6238734+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>138</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6273889+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.6273889+02:00</Start>
+    <ScheduledDate>2024-01-22T18:34:56.6273889+02:00</ScheduledDate>
+    <Deadline>2024-01-22T18:56:56.6273889+02:00</Deadline>
+    <Complete>2024-01-22T19:15:56.6273889+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>139</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6310821+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.6310821+02:00</Start>
+    <ScheduledDate>2024-01-25T15:50:56.6310821+02:00</ScheduledDate>
+    <Deadline>2024-01-25T15:57:56.6310821+02:00</Deadline>
+    <Complete>2024-01-25T16:08:56.6310821+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>140</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6346503+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.6346503+02:00</Start>
+    <ScheduledDate>2024-01-28T17:19:56.6346503+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:41:56.6346503+02:00</Deadline>
+    <Complete>2024-01-28T17:50:56.6346503+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>141</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6382001+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.6382001+02:00</Start>
+    <ScheduledDate>2024-01-24T18:28:56.6382001+02:00</ScheduledDate>
+    <Deadline>2024-01-24T18:32:56.6382001+02:00</Deadline>
+    <Complete>2024-01-24T19:01:56.6382001+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>142</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6421465+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.6421465+02:00</Start>
+    <ScheduledDate>2024-01-25T15:57:56.6421465+02:00</ScheduledDate>
+    <Deadline>2024-01-25T16:23:56.6421465+02:00</Deadline>
+    <Complete>2024-01-25T16:50:56.6421465+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>143</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6473987+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.6473987+02:00</Start>
+    <ScheduledDate>2024-01-23T16:25:56.6473987+02:00</ScheduledDate>
+    <Deadline>2024-01-23T16:46:56.6473987+02:00</Deadline>
+    <Complete>2024-01-23T16:53:56.6473987+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>144</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6515714+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.6515714+02:00</Start>
+    <ScheduledDate>2024-01-23T19:32:56.6515714+02:00</ScheduledDate>
+    <Deadline>2024-01-23T19:34:56.6515714+02:00</Deadline>
+    <Complete>2024-01-23T19:42:56.6515714+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>145</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6555929+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.6555929+02:00</Start>
+    <ScheduledDate>2024-01-27T18:08:56.6555929+02:00</ScheduledDate>
+    <Deadline>2024-01-27T18:09:56.6555929+02:00</Deadline>
+    <Complete>2024-01-27T18:32:56.6555929+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>146</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6595312+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.6595312+02:00</Start>
+    <ScheduledDate>2024-01-27T18:07:56.6595312+02:00</ScheduledDate>
+    <Deadline>2024-01-27T18:15:56.6595312+02:00</Deadline>
+    <Complete>2024-01-27T18:26:56.6595312+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>147</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6636318+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.6636318+02:00</Start>
+    <ScheduledDate>2024-01-25T17:27:56.6636318+02:00</ScheduledDate>
+    <Deadline>2024-01-25T17:55:56.6636318+02:00</Deadline>
+    <Complete>2024-01-25T18:00:56.6636318+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>148</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6673636+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.6673636+02:00</Start>
+    <ScheduledDate>2024-01-27T15:12:56.6673636+02:00</ScheduledDate>
+    <Deadline>2024-01-27T15:24:56.6673636+02:00</Deadline>
+    <Complete>2024-01-27T15:36:56.6673636+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>149</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6714907+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.6714907+02:00</Start>
+    <ScheduledDate>2024-01-25T19:44:56.6714907+02:00</ScheduledDate>
+    <Deadline>2024-01-25T20:11:56.6714907+02:00</Deadline>
+    <Complete>2024-01-25T20:23:56.6714907+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>150</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6808591+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.6808591+02:00</Start>
+    <ScheduledDate>2024-01-23T16:37:56.6808591+02:00</ScheduledDate>
+    <Deadline>2024-01-23T16:55:56.6808591+02:00</Deadline>
+    <Complete>2024-01-23T17:16:56.6808591+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>151</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6849752+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.6849752+02:00</Start>
+    <ScheduledDate>2024-01-25T16:37:56.6849752+02:00</ScheduledDate>
+    <Deadline>2024-01-25T16:59:56.6849752+02:00</Deadline>
+    <Complete>2024-01-25T16:59:56.6849752+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>152</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6891757+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.6891757+02:00</Start>
+    <ScheduledDate>2024-01-28T17:22:56.6891757+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:28:56.6891757+02:00</Deadline>
+    <Complete>2024-01-28T17:52:56.6891757+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>153</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6935309+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.6935309+02:00</Start>
+    <ScheduledDate>2024-01-27T19:53:56.6935309+02:00</ScheduledDate>
+    <Deadline>2024-01-27T20:22:56.6935309+02:00</Deadline>
+    <Complete>2024-01-27T20:32:56.6935309+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>154</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.6981226+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.6981226+02:00</Start>
+    <ScheduledDate>2024-01-23T18:19:56.6981226+02:00</ScheduledDate>
+    <Deadline>2024-01-23T18:47:56.6981226+02:00</Deadline>
+    <Complete>2024-01-23T19:15:56.6981226+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>155</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7028632+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.7028632+02:00</Start>
+    <ScheduledDate>2024-01-23T15:15:56.7028632+02:00</ScheduledDate>
+    <Deadline>2024-01-23T15:37:56.7028632+02:00</Deadline>
+    <Complete>2024-01-23T15:52:56.7028632+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>156</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7094879+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.7094879+02:00</Start>
+    <ScheduledDate>2024-01-28T17:47:56.7094879+02:00</ScheduledDate>
+    <Deadline>2024-01-28T18:16:56.7094879+02:00</Deadline>
+    <Complete>2024-01-28T18:23:56.7094879+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>157</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7143745+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.7143745+02:00</Start>
+    <ScheduledDate>2024-01-25T17:23:56.7143745+02:00</ScheduledDate>
+    <Deadline>2024-01-25T17:52:56.7143745+02:00</Deadline>
+    <Complete>2024-01-25T18:00:56.7143745+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>158</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7188163+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.7188163+02:00</Start>
+    <ScheduledDate>2024-01-27T17:23:56.7188163+02:00</ScheduledDate>
+    <Deadline>2024-01-27T17:33:56.7188163+02:00</Deadline>
+    <Complete>2024-01-27T17:46:56.7188163+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>159</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7237971+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.7237971+02:00</Start>
+    <ScheduledDate>2024-01-24T15:39:56.7237971+02:00</ScheduledDate>
+    <Deadline>2024-01-24T16:02:56.7237971+02:00</Deadline>
+    <Complete>2024-01-24T16:25:56.7237971+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>160</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7283937+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.7283937+02:00</Start>
+    <ScheduledDate>2024-01-22T18:28:56.7283937+02:00</ScheduledDate>
+    <Deadline>2024-01-22T18:43:56.7283937+02:00</Deadline>
+    <Complete>2024-01-22T19:09:56.7283937+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>161</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7333165+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.7333165+02:00</Start>
+    <ScheduledDate>2024-01-27T18:19:56.7333165+02:00</ScheduledDate>
+    <Deadline>2024-01-27T18:35:56.7333165+02:00</Deadline>
+    <Complete>2024-01-27T18:59:56.7333165+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>162</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7385619+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.7385619+02:00</Start>
+    <ScheduledDate>2024-01-23T17:08:56.7385619+02:00</ScheduledDate>
+    <Deadline>2024-01-23T17:32:56.7385619+02:00</Deadline>
+    <Complete>2024-01-23T17:47:56.7385619+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>163</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7434998+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.7434998+02:00</Start>
+    <ScheduledDate>2024-01-24T19:26:56.7434998+02:00</ScheduledDate>
+    <Deadline>2024-01-24T19:42:56.7434998+02:00</Deadline>
+    <Complete>2024-01-24T20:02:56.7434998+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>164</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.748407+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.748407+02:00</Start>
+    <ScheduledDate>2024-01-22T16:25:56.748407+02:00</ScheduledDate>
+    <Deadline>2024-01-22T16:31:56.748407+02:00</Deadline>
+    <Complete>2024-01-22T16:51:56.748407+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>165</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7533108+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.7533108+02:00</Start>
+    <ScheduledDate>2024-01-24T18:12:56.7533108+02:00</ScheduledDate>
+    <Deadline>2024-01-24T18:12:56.7533108+02:00</Deadline>
+    <Complete>2024-01-24T18:24:56.7533108+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>166</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7583813+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.7583813+02:00</Start>
+    <ScheduledDate>2024-01-27T17:19:56.7583813+02:00</ScheduledDate>
+    <Deadline>2024-01-27T17:27:56.7583813+02:00</Deadline>
+    <Complete>2024-01-27T17:50:56.7583813+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>167</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7633942+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.7633942+02:00</Start>
+    <ScheduledDate>2024-01-24T16:08:56.7633942+02:00</ScheduledDate>
+    <Deadline>2024-01-24T16:33:56.7633942+02:00</Deadline>
+    <Complete>2024-01-24T16:52:56.7633942+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>168</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7698315+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.7698315+02:00</Start>
+    <ScheduledDate>2024-01-23T19:39:56.7698315+02:00</ScheduledDate>
+    <Deadline>2024-01-23T20:02:56.7698315+02:00</Deadline>
+    <Complete>2024-01-23T20:31:56.7698315+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>169</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7788553+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.7788553+02:00</Start>
+    <ScheduledDate>2024-01-25T17:27:56.7788553+02:00</ScheduledDate>
+    <Deadline>2024-01-25T17:42:56.7788553+02:00</Deadline>
+    <Complete>2024-01-25T17:53:56.7788553+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>170</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7842151+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.7842151+02:00</Start>
+    <ScheduledDate>2024-01-23T18:29:56.7842151+02:00</ScheduledDate>
+    <Deadline>2024-01-23T18:35:56.7842151+02:00</Deadline>
+    <Complete>2024-01-23T18:41:56.7842151+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>171</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7899393+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.7899393+02:00</Start>
+    <ScheduledDate>2024-01-22T17:35:56.7899393+02:00</ScheduledDate>
+    <Deadline>2024-01-22T17:45:56.7899393+02:00</Deadline>
+    <Complete>2024-01-22T17:59:56.7899393+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>172</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.7952385+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.7952385+02:00</Start>
+    <ScheduledDate>2024-01-26T15:48:56.7952385+02:00</ScheduledDate>
+    <Deadline>2024-01-26T15:56:56.7952385+02:00</Deadline>
+    <Complete>2024-01-26T16:22:56.7952385+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>173</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.801753+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.801753+02:00</Start>
+    <ScheduledDate>2024-01-25T19:19:56.801753+02:00</ScheduledDate>
+    <Deadline>2024-01-25T19:27:56.801753+02:00</Deadline>
+    <Complete>2024-01-25T19:45:56.801753+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>174</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8078592+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.8078592+02:00</Start>
+    <ScheduledDate>2024-01-28T19:45:56.8078592+02:00</ScheduledDate>
+    <Deadline>2024-01-28T19:52:56.8078592+02:00</Deadline>
+    <Complete>2024-01-28T20:09:56.8078592+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>175</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.813154+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.813154+02:00</Start>
+    <ScheduledDate>2024-01-25T18:20:56.813154+02:00</ScheduledDate>
+    <Deadline>2024-01-25T18:35:56.813154+02:00</Deadline>
+    <Complete>2024-01-25T18:55:56.813154+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>176</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8186234+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.8186234+02:00</Start>
+    <ScheduledDate>2024-01-25T19:24:56.8186234+02:00</ScheduledDate>
+    <Deadline>2024-01-25T19:27:56.8186234+02:00</Deadline>
+    <Complete>2024-01-25T19:31:56.8186234+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>177</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.824377+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.824377+02:00</Start>
+    <ScheduledDate>2024-01-26T17:05:56.824377+02:00</ScheduledDate>
+    <Deadline>2024-01-26T17:33:56.824377+02:00</Deadline>
+    <Complete>2024-01-26T17:56:56.824377+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>178</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8299912+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.8299912+02:00</Start>
+    <ScheduledDate>2024-01-28T16:59:56.8299912+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:12:56.8299912+02:00</Deadline>
+    <Complete>2024-01-28T17:20:56.8299912+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>179</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.835544+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.835544+02:00</Start>
+    <ScheduledDate>2024-01-23T16:47:56.835544+02:00</ScheduledDate>
+    <Deadline>2024-01-23T17:13:56.835544+02:00</Deadline>
+    <Complete>2024-01-23T17:36:56.835544+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>180</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8411614+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.8411614+02:00</Start>
+    <ScheduledDate>2024-01-25T18:36:56.8411614+02:00</ScheduledDate>
+    <Deadline>2024-01-25T18:54:56.8411614+02:00</Deadline>
+    <Complete>2024-01-25T19:13:56.8411614+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>181</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8467476+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.8467476+02:00</Start>
+    <ScheduledDate>2024-01-25T15:37:56.8467476+02:00</ScheduledDate>
+    <Deadline>2024-01-25T15:57:56.8467476+02:00</Deadline>
+    <Complete>2024-01-25T16:16:56.8467476+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>182</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8523541+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.8523541+02:00</Start>
+    <ScheduledDate>2024-01-25T16:33:56.8523541+02:00</ScheduledDate>
+    <Deadline>2024-01-25T16:59:56.8523541+02:00</Deadline>
+    <Complete>2024-01-25T17:27:56.8523541+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>183</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8580895+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.8580895+02:00</Start>
+    <ScheduledDate>2024-01-28T17:51:56.8580895+02:00</ScheduledDate>
+    <Deadline>2024-01-28T18:04:56.8580895+02:00</Deadline>
+    <Complete>2024-01-28T18:29:56.8580895+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>184</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8659909+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.8659909+02:00</Start>
+    <ScheduledDate>2024-01-23T16:28:56.8659909+02:00</ScheduledDate>
+    <Deadline>2024-01-23T16:57:56.8659909+02:00</Deadline>
+    <Complete>2024-01-23T17:11:56.8659909+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>185</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8717423+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.8717423+02:00</Start>
+    <ScheduledDate>2024-01-24T19:40:56.8717423+02:00</ScheduledDate>
+    <Deadline>2024-01-24T19:46:56.8717423+02:00</Deadline>
+    <Complete>2024-01-24T19:49:56.8717423+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>186</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8776805+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.8776805+02:00</Start>
+    <ScheduledDate>2024-01-22T16:01:56.8776805+02:00</ScheduledDate>
+    <Deadline>2024-01-22T16:01:56.8776805+02:00</Deadline>
+    <Complete>2024-01-22T16:28:56.8776805+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>187</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8835655+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.8835655+02:00</Start>
+    <ScheduledDate>2024-01-24T19:16:56.8835655+02:00</ScheduledDate>
+    <Deadline>2024-01-24T19:36:56.8835655+02:00</Deadline>
+    <Complete>2024-01-24T20:01:56.8835655+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>188</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8893595+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.8893595+02:00</Start>
+    <ScheduledDate>2024-01-28T19:59:56.8893595+02:00</ScheduledDate>
+    <Deadline>2024-01-28T20:06:56.8893595+02:00</Deadline>
+    <Complete>2024-01-28T20:22:56.8893595+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>189</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.8954164+02:00</CreatedAt>
+    <Start>2024-01-22T15:03:56.8954164+02:00</Start>
+    <ScheduledDate>2024-01-22T18:03:56.8954164+02:00</ScheduledDate>
+    <Deadline>2024-01-22T18:20:56.8954164+02:00</Deadline>
+    <Complete>2024-01-22T18:21:56.8954164+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>190</Id>
+    <Description>Serve the prepared food from the restaurant kitchen to the diners</Description>
+    <Alias>serve</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9014244+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.9014244+02:00</Start>
+    <ScheduledDate>2024-01-26T19:24:56.9014244+02:00</ScheduledDate>
+    <Deadline>2024-01-26T19:50:56.9014244+02:00</Deadline>
+    <Complete>2024-01-26T20:05:56.9014244+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>191</Id>
+    <Description>Preparation of dough for all types of bread</Description>
+    <Alias>baker</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9075514+02:00</CreatedAt>
+    <Start>2024-01-23T15:03:56.9075514+02:00</Start>
+    <ScheduledDate>2024-01-23T17:18:56.9075514+02:00</ScheduledDate>
+    <Deadline>2024-01-23T17:46:56.9075514+02:00</Deadline>
+    <Complete>2024-01-23T17:54:56.9075514+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>192</Id>
+    <Description>Chopping the vegetables for all types of salads</Description>
+    <Alias>cutting vegetables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9137484+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.9137484+02:00</Start>
+    <ScheduledDate>2024-01-24T19:33:56.9137484+02:00</ScheduledDate>
+    <Deadline>2024-01-24T20:00:56.9137484+02:00</Deadline>
+    <Complete>2024-01-24T20:22:56.9137484+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>193</Id>
+    <Description>Washing the dirty dishes that come back from the diners</Description>
+    <Alias>dishwashing</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9198756+02:00</CreatedAt>
+    <Start>2024-01-25T15:03:56.9198756+02:00</Start>
+    <ScheduledDate>2024-01-25T17:40:56.9198756+02:00</ScheduledDate>
+    <Deadline>2024-01-25T18:03:56.9198756+02:00</Deadline>
+    <Complete>2024-01-25T18:17:56.9198756+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>194</Id>
+    <Description>Washing the dirty floors</Description>
+    <Alias>washing floors</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9262725+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.9262725+02:00</Start>
+    <ScheduledDate>2024-01-26T17:05:56.9262725+02:00</ScheduledDate>
+    <Deadline>2024-01-26T17:26:56.9262725+02:00</Deadline>
+    <Complete>2024-01-26T17:49:56.9262725+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>195</Id>
+    <Description>The seasoning of the various dishes in the restaurant</Description>
+    <Alias>seasoning</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9326186+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.9326186+02:00</Start>
+    <ScheduledDate>2024-01-28T16:17:56.9326186+02:00</ScheduledDate>
+    <Deadline>2024-01-28T16:24:56.9326186+02:00</Deadline>
+    <Complete>2024-01-28T16:48:56.9326186+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>196</Id>
+    <Description>to plate the dishes served to the diners</Description>
+    <Alias>plate</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9392116+02:00</CreatedAt>
+    <Start>2024-01-28T15:03:56.9392116+02:00</Start>
+    <ScheduledDate>2024-01-28T16:55:56.9392116+02:00</ScheduledDate>
+    <Deadline>2024-01-28T17:00:56.9392116+02:00</Deadline>
+    <Complete>2024-01-28T17:18:56.9392116+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>197</Id>
+    <Description>Reading the orders from the diners</Description>
+    <Alias>reading</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.945808+02:00</CreatedAt>
+    <Start>2024-01-24T15:03:56.945808+02:00</Start>
+    <ScheduledDate>2024-01-24T16:07:56.945808+02:00</ScheduledDate>
+    <Deadline>2024-01-24T16:10:56.945808+02:00</Deadline>
+    <Complete>2024-01-24T16:25:56.945808+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>198</Id>
+    <Description>Welcoming guests to the restaurant</Description>
+    <Alias>Hospitality</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9531889+02:00</CreatedAt>
+    <Start>2024-01-27T15:03:56.9531889+02:00</Start>
+    <ScheduledDate>2024-01-27T16:42:56.9531889+02:00</ScheduledDate>
+    <Deadline>2024-01-27T16:44:56.9531889+02:00</Deadline>
+    <Complete>2024-01-27T16:54:56.9531889+02:00</Complete>
+    <Deliverables />
+    <Remarks />
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
+  <Task>
+    <Id>199</Id>
+    <Description>The arrangement of the tables for the diners</Description>
+    <Alias>arranging tables</Alias>
+    <Milestone>false</Milestone>
+    <RequiredEffort xsi:nil="true" />
+    <CreatedAt>2024-01-22T15:03:56.9600191+02:00</CreatedAt>
+    <Start>2024-01-26T15:03:56.9600191+02:00</Start>
+    <ScheduledDate>2024-01-26T17:44:56.9600191+02:00</ScheduledDate>
+    <Deadline>2024-01-26T17:53:56.9600191+02:00</Deadline>
+    <Complete>2024-01-26T18:21:56.9600191+02:00</Complete>
+    <EngineerId>0</EngineerId>
+    <ComplexityLevel xsi:nil="true" />
+    <Active>true</Active>
+  </Task>
 </ArrayOfTask>
-
-

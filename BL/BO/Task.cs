@@ -8,8 +8,8 @@ namespace BO;
 public class Task
 {
     public int Id { get; init; }//
-    public string Description { get; set; }//
-    public string Alias { get; set; }//
+    public string? Description { get; set; }//
+    public string? Alias { get; set; }//
     public MilestoneInTask? Milestone { get; set; }//
     public Status? Status { get; set; }//
     public DateTime CreateAt { get; set; }//
