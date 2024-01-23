@@ -53,7 +53,8 @@ internal class EngineerImplementation : IEngineer
 
     public IEnumerable<BO.Engineer> ReadAll(Func<BO.Engineer, bool>? filter = null)
     {
-        IEnumerable<BO.Engineer?> boEngineersList =
+        
+           IEnumerable<BO.Engineer?> boEngineersList =
            from DO.Engineer doEngineer in _dal.Engineer.ReadAll()
            let task = _dal.Task.ReadAll(task => task?.EngineerId == doEngineer.Id).FirstOrDefault()
            select new BO.Engineer()
@@ -63,8 +64,8 @@ internal class EngineerImplementation : IEngineer
                Email = doEngineer.Email,
                Level = (BO.EngineerExperience)doEngineer.Level!,
                Cost = (double)doEngineer.Cost!,
-               Task = new BO.TaskInEngineer()
-               { Id = task!.Id, Alias = task.Alias! }
+               Task = task != null? new BO.TaskInEngineer()
+               { Id = task!.Id, Alias = task.Alias! }:null
            };
         if (filter is null)
             return boEngineersList!;

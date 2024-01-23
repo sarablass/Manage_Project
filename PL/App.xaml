@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:PL"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:EngineerExperiencesCollection x:Key="EngineerExperiencesCollectionKey" />
+        <local:ConvertIdToContent x:Key="ConvertIdToContentKey"/>
+        <local:ConvertIdToIsEnable x:Key="ConvertIdToIsEnableKey"/>
     </Application.Resources>
 </Application>
