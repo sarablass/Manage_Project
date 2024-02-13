@@ -19,11 +19,11 @@
 public record Task
 (
     int Id,
-    string Description,
-    string Alias,
+    string? Description,
+    string? Alias,
     bool Milestone,
     TimeSpan? RequiredEffort,
-    DateTime? CreatedAt,
+    DateTime CreatedAt,
     DateTime? Start,
     DateTime? ScheduledDate,
     DateTime? Deadline,

@@ -34,8 +34,7 @@ namespace PL.Engineer
 
         public EngineerListWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent();  
             EngineerList = s_bl?.Engineer.ReadAll()!;
         }
 

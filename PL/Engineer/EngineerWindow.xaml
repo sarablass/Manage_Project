@@ -38,6 +38,6 @@
                 <TextBox Text="{Binding Task, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
         </StackPanel>
-        <Button Content="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToContentKey}}" HorizontalAlignment="Left" Margin="161,339,0,10" Padding="10"  Width="162" Click="btnAddUpdate_Click"/>
+        <Button Content="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToContentKey}}" HorizontalAlignment="Left" Margin="161,339,0,20" Padding="10"  Width="162" Click="btnAddUpdate_Click"/>
     </Grid>
 </Window>

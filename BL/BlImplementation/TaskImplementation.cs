@@ -1,4 +1,7 @@
 ﻿using BlApi;
+using BO;
+using DO;
+
 namespace BlImplementation;
 
 internal class TaskImplementation : ITask
@@ -10,31 +13,54 @@ internal class TaskImplementation : ITask
         if (dependency is null)
             return null;
         DO.Task task = _dal.Task.Read(dependency!.DependentTask)!;
-        return new BO.MilestoneInTask() { Id = task.Id, Alias = task.Alias };
+        return  new BO.MilestoneInTask() { Id = task.Id, Alias = task.Alias };
     }
 
-    private IEnumerable<BO.TaskInList>? CalculateTaskInList(int id)
+
+
+    //private IEnumerable<BO.TaskInList>? CalculateTaskInList(int id)
+    //{
+    //    List<DO.Dependency?> DependenciesList = _dal.Dependency.ReadAll(dependency => dependency?.DependentTask == id).ToList();  //Creating a list of all dependencies whose id of our current task equals the id of the dependent task.
+    //    List<DO.Task>? tasksList = null; //Initialize the list of relevant tasks.
+    //    foreach (DO.Dependency? dependency in DependenciesList) //A loop that goes through each of the dependencies.
+    //    {
+    //        tasksList?.Add(_dal.Task.Read((int)dependency?.DependsOnTask!)!); //Add the previous tasks to the list of relevant tasks.
+    //    }
+    //    IEnumerable<BO.TaskInList> TasksInList = //Allocating a list of type TaskInList.
+    //     from DO.Task doTask in tasksList! //For each task 
+    //     select new BO.TaskInList() //Create an object of type TaskInList.
+    //     {
+    //         Id = doTask.Id,
+    //         Description = doTask.Description!,
+    //         Alias = doTask.Alias!,
+    //         Status = CalculateStatus(doTask)
+    //     };
+    //    return TasksInList; //Return the TaskInList list.   
+    //}
+
+    public List<TaskInList> CalculateTaskInList(int id)
     {
-        List<DO.Dependency?> DependenciesList = _dal.Dependency.ReadAll(dependency => dependency?.DependentTask == id).ToList();  //Creating a list of all dependencies whose id of our current task equals the id of the dependent task.
-        List<DO.Task>? tasksList = null; //Initialize the list of relevant tasks.
-        foreach (DO.Dependency? dependency in DependenciesList) //A loop that goes through each of the dependencies.
+        var dependenciesList = _dal.Dependency.ReadAll(); //Creating a list of all dependencies whose id of our current task equals the id of the dependent task.
+        //A loop that goes through each of the dependencies.
+        var dependentTasks = (from dependence in dependenciesList
+                              where dependence.DependentTask == id
+                              let taskDependOn = _dal.Task.Read(dependence.DependsOnTask)
+                              select new BO.TaskInList()
+                              {
+                                  Id = dependence.Id,
+                                  Description = taskDependOn?.Description,
+                                  Alias = taskDependOn?.Alias,
+                                  Status = CalculateStatus(taskDependOn)
+                              });
+        return dependentTasks.ToList();
+    }
+
+    private BO.Status CalculateStatus(DO.Task? doTask)
+    {
+        if (doTask is null)
         {
-            tasksList?.Add(_dal.Task.Read((int)dependency?.DependsOnTask!)!); //Add the previous tasks to the list of relevant tasks.
+            return (BO.Status)0;
         }
-        IEnumerable<BO.TaskInList> TasksInList = //Allocating a list of type TaskInList.
-         from DO.Task doTask in tasksList! //For each task 
-         select new BO.TaskInList() //Create an object of type TaskInList.
-         {
-             Id = doTask.Id,
-             Description = doTask.Description!,
-             Alias = doTask.Alias!,
-             Status = CalculateStatus(doTask)
-         };
-        return TasksInList; //Return the TaskInList list.   
-    }
-
-    private BO.Status CalculateStatus(DO.Task doTask)
-    {
         if (doTask.Start == null)//לא מתוכנן
             return (BO.Status)0;
         else if (doTask.Start != null && doTask.Start > DateTime.Now)//מתוזמן
@@ -51,13 +77,19 @@ internal class TaskImplementation : ITask
 
     private BO.EngineerInTask? CalculateEngineer(DO.Task doTask)
     {      
-        if (doTask?.EngineerId is null)
-            return null;    
-        return new BO.EngineerInTask()
+         
+        DO.Engineer engineer = _dal.Engineer.Read(doTask.Id)!;
+        if(engineer is null)
+            return null;
+        else
         {
-                Id = doTask!.EngineerId,
-                Name = _dal.Engineer.Read(doTask.Id)?.Name
-        };
+            return new BO.EngineerInTask()
+            {
+                Id = engineer.Id,
+                Name = engineer.Name
+            };
+        }
+       
     }
 
     public int Create(BO.Task boTask)
@@ -67,7 +99,7 @@ internal class TaskImplementation : ITask
 
 
         DO.Task doTask = new DO.Task
-         (boTask.Id, boTask.Description, boTask.Alias, false, boTask.CompleteDate - boTask.StartDate, boTask.CreateAt, boTask.StartDate, boTask.BaselineStartDate, boTask.DeadlineDate, boTask.CompleteDate, boTask.Deliverables, boTask.Remarks, boTask.Engineer!.Id, (DO.EngineerExperience)boTask.ComplexityLevel!, boTask.IsActive);
+         (boTask.Id, boTask.Description!, boTask.Alias!, false, boTask.CompleteDate - boTask.StartDate, boTask.CreateAt, boTask.StartDate, boTask.BaselineStartDate, boTask.DeadlineDate, boTask.CompleteDate, boTask.Deliverables, boTask.Remarks, boTask.Engineer!.Id, (DO.EngineerExperience)boTask.ComplexityLevel!, boTask.IsActive);
 
         var dependenciesList = boTask.Dependencies!
             .Select(task => new DO.Dependency
@@ -98,19 +130,19 @@ internal class TaskImplementation : ITask
             Id = doTask.Id,
             Description = doTask.Description,
             Alias = doTask.Alias,
-            Milestone = CalculateMilestone(doTask),
+            Milestone = doTask.Milestone ? new BO.MilestoneInTask() : null, /*CalculateMilestone(doTask),*/
             Status = CalculateStatus(doTask),
-            CreateAt = (DateTime)doTask.CreatedAt!,
+            CreateAt = doTask!.CreatedAt,
             BaselineStartDate =doTask.ScheduledDate,
-            StartDate = (DateTime)doTask.Start!,
+            StartDate = doTask!.Start,
             ForecastDate = doTask.Start + doTask.RequiredEffort,
-            DeadlineDate = (DateTime)doTask.Deadline!,
-            CompleteDate = (DateTime)doTask.Complete!,
+            DeadlineDate = doTask!.Deadline,
+            CompleteDate = doTask!.Complete,
             Deliverables = doTask.Deliverables,
             Remarks = doTask.Remarks,
             Engineer = CalculateEngineer(doTask),
             ComplexityLevel = (BO.EngineerExperience)doTask.ComplexityLevel!,
-            Dependencies = (List<BO.TaskInList>)CalculateTaskInList(doTask.Id)!,
+            Dependencies = CalculateTaskInList(doTask.Id)!,
             IsActive = doTask.Active
         };
     }
@@ -119,23 +151,28 @@ internal class TaskImplementation : ITask
     {
         IEnumerable<BO.Task?> tasksList =
            from DO.Task doTask in _dal.Task.ReadAll()
+           let taskEngineer = _dal.Engineer.ReadAll(engineer => doTask.EngineerId == engineer.Id).FirstOrDefault()
            select new BO.Task()
            {
                Id = doTask.Id,
-               Description = doTask.Description,
-               Alias = doTask.Alias,
-               Milestone = CalculateMilestone(doTask),
+               Description = doTask?.Description,
+               Alias = doTask?.Alias,
+               Milestone = doTask.Milestone ? new BO.MilestoneInTask() : null, /*CalculateMilestone(doTask),*/
                Status = CalculateStatus(doTask),
-               CreateAt = (DateTime)doTask.CreatedAt!,
+               CreateAt = doTask!.CreatedAt,
                BaselineStartDate = doTask.ScheduledDate,
-               StartDate = (DateTime)doTask.Start!,
+               StartDate = doTask!.Start,
                ForecastDate = doTask.Start + doTask.RequiredEffort,
-               DeadlineDate = (DateTime)doTask.Deadline!,
-               CompleteDate = (DateTime)doTask.Complete!,
-               Deliverables = doTask.Deliverables,
-               Remarks = doTask.Remarks,
-               Engineer = CalculateEngineer(doTask),
-               ComplexityLevel = (BO.EngineerExperience)doTask.ComplexityLevel!,
+               DeadlineDate = doTask!.Deadline,
+               CompleteDate = doTask!.Complete,
+               Deliverables = doTask?.Deliverables,
+               Remarks = doTask?.Remarks,
+               Engineer = taskEngineer == null ? null : new BO.EngineerInTask()
+               {
+                   Id = taskEngineer.Id,
+                   Name = taskEngineer?.Name
+               },
+               ComplexityLevel = (BO.EngineerExperience?)doTask.ComplexityLevel!,
                Dependencies = (List<BO.TaskInList>)CalculateTaskInList(doTask.Id)!,
                IsActive = doTask.Active
            };
@@ -150,7 +187,7 @@ internal class TaskImplementation : ITask
         BO.Tools.ValidationString(boTask.Alias!);
 
         DO.Task doTask = new DO.Task
-        (boTask.Id, boTask.Description, boTask.Alias, false, boTask.CompleteDate - boTask.StartDate, boTask.CreateAt, boTask.StartDate, boTask.BaselineStartDate, boTask.DeadlineDate, boTask.CompleteDate, boTask.Deliverables, boTask.Remarks, boTask.Engineer!.Id, (DO.EngineerExperience)boTask.ComplexityLevel!, boTask.IsActive);
+        (boTask.Id, boTask.Description!, boTask.Alias!, false, boTask.CompleteDate - boTask.StartDate, boTask.CreateAt, boTask.StartDate, boTask.BaselineStartDate, boTask.DeadlineDate, boTask.CompleteDate, boTask.Deliverables, boTask.Remarks, boTask.Engineer!.Id, (DO.EngineerExperience)boTask.ComplexityLevel!, boTask.IsActive);
         try
         {
             _dal.Task.Update(doTask);

@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Initialization" Margin="445,245,159,107" Click="btnInitialization_Click"/>
-        <Button Content="Handle Engineers" Margin="190,245,414,107" Click="btnEngineers_Click"/>
-
+        <Button Content="Initialization" Margin="547,240,57,112" Click="btnInitialization_Click"/>
+        <Button Content="Handle Engineers" Margin="61,240,543,112" Click="btnEngineers_Click"/>
+        <Button Content="Handle Tasks" Margin="302,240,302,112" Click="btnTasks_Click" />
     </Grid>
 </Window>
