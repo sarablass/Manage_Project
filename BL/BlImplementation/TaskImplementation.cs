@@ -47,7 +47,7 @@ internal class TaskImplementation : ITask
                               let taskDependOn = _dal.Task.Read(dependence.DependsOnTask)
                               select new BO.TaskInList()
                               {
-                                  Id = dependence.Id,
+                                  Id = dependence.DependsOnTask,
                                   Description = taskDependOn?.Description,
                                   Alias = taskDependOn?.Alias,
                                   Status = CalculateStatus(taskDependOn)
