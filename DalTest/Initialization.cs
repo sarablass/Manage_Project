@@ -45,7 +45,9 @@ public static class Initialization
                 DateTime? _complete = _deadline.AddMinutes(s_rand.Next(0, 30));
                 int randIndex = s_rand.Next(0, engineers.Count);
                 int _engineerId = engineers[randIndex]?.Id ?? 0;
-                Task newTask = new(0, _description, _alias, false,null, _createdAt, _start, _scheduledDate, _deadline, _complete, null, null, _engineerId, null,true);
+                int _rand_level = s_rand.Next(0, Enum.GetNames<EngineerExperience>().Count());
+                EngineerExperience _level = (EngineerExperience)_rand_level;
+                Task newTask = new(0, _description, _alias, false,null, _createdAt, _start, _scheduledDate, _deadline, _complete, null, null, _engineerId, _level, true);
                 s_dal!.Task.Create(newTask);
             }
         }

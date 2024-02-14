@@ -61,5 +61,9 @@ namespace PL.Engineer
                 MessageBox.Show($"{ex}", "Confirmation", MessageBoxButton.OK);
             }
         }
+        private void Window_activity(object sender, EventArgs e)
+        {
+            EngineerList = s_bl.Engineer.ReadAll()!;
+        }
     }
 }

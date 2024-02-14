@@ -18,10 +18,6 @@
                 <TextBox Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">Is Active:</TextBlock>
-                <CheckBox IsChecked="{Binding IsActive, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
                 <TextBlock Width="100" VerticalAlignment="Center">Email:</TextBlock>
                 <TextBox Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
@@ -35,7 +31,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
                 <TextBlock Width="100" VerticalAlignment="Center">Task:</TextBlock>
-                <TextBox Text="{Binding Task, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
+                <TextBox Text="{Binding Task.Alias, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
         </StackPanel>
         <Button Content="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToContentKey}}" HorizontalAlignment="Left" Margin="161,339,0,20" Padding="10"  Width="162" Click="btnAddUpdate_Click"/>

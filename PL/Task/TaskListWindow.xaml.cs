@@ -57,8 +57,13 @@ namespace PL.Task
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex}", "Confirmation", MessageBoxButton.OK);
+                MessageBox.Show($"{ex.Message}", "Exception", MessageBoxButton.OK);
             }
+        }
+
+        private void Window_activity(object sender, EventArgs e)
+        {
+            TaskList = s_bl.Task.ReadAll()!;
         }
     }
 }
