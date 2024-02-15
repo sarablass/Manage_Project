@@ -5,35 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL.Engineer"
         mc:Ignorable="d"
-        Title="EngineerWindow" Height="450" Width="800"
+        Title="EngineerWindow" Height="500" Width="800"
         DataContext="{Binding CurrentEngineer, RelativeSource={RelativeSource Self}, Mode=TwoWay}">
     <Grid>
         <StackPanel Margin="20">
+            <Label Width="242" Content="Add/Update Engineer" FontWeight="Bold" FontSize="22"/>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <Label Width="100" Content="ID:" VerticalAlignment="Center"/> 
+                <Label Width="100" Content="ID:" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
                 <TextBox IsEnabled="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToIsEnableKey}}"  Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">Name:</TextBlock>
+                <Label Width="100" Content="Name:" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
                 <TextBox Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">Email:</TextBlock>
+                <Label Width="100" Content="Email:" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
                 <TextBox Text="{Binding Email, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">Level:</TextBlock>
+                <Label Width="100" Content="Level:" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource EngineerExperiencesCollectionKey}}" SelectedValue="{Binding Level, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">Cost:</TextBlock>
+                <Label Width="100" Content="Cost:" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
                 <TextBox Text="{Binding Cost, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">Task:</TextBlock>
+                <Label Width="100" Content="Task:" VerticalAlignment="Center" FontWeight="Bold" FontSize="15"/>
                 <TextBox Text="{Binding Task.Id, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" IsEnabled="False" Width="200" />
             </StackPanel>
         </StackPanel>
-        <Button Content="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToContentKey}}" HorizontalAlignment="Left" Margin="161,339,0,20" Padding="10"  Width="162" Click="btnAddUpdate_Click"/>
+        <Button Content="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToContentKey}}" HorizontalAlignment="Left" Margin="311,392,0,10" Padding="10"  Width="167" Click="btnAddUpdate_Click" FontWeight="Bold" FontSize="15" Background="CadetBlue"/>
     </Grid>
 </Window>

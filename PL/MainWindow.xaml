@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Initialization" Margin="547,240,57,112" Click="btnInitialization_Click"/>
-        <Button Content="Handle Engineers" Margin="61,240,543,112" Click="btnEngineers_Click"/>
-        <Button Content="Handle Tasks" Margin="302,240,302,112" Click="btnTasks_Click" />
+    <Grid Margin="0,0,0,-6">
+        <Image HorizontalAlignment="Center" Height="447" Margin="0,-16,0,0" VerticalAlignment="Top" Width="800" Source="C:\Users\The user\Source\Repos\dotNet5784_1671_6466\PL\Task\pic.jpg" Stretch="UniformToFill"/>
+        <Button Content="Initialization" Margin="550,240,31,90" Click="btnInitialization_Click" FontWeight="Bold" FontSize="15" Background="CadetBlue"/>
+        <Button Content="Handle Engineers" Margin="293,240,287,90" Click="btnEngineers_Click" FontWeight="Bold" FontSize="15" Background="CadetBlue"/>
+        <Button Content="Handle Tasks" Margin="33,240,548,90" Click="btnTasks_Click" FontWeight="Bold" FontSize="15" Background="CadetBlue" />
     </Grid>
 </Window>
