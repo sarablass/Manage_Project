@@ -29,7 +29,16 @@
         <ListView Margin="5" Grid.Row="1" ItemsSource="{Binding EngineerList}" MouseDoubleClick="lvUpdate_MouseDoubleClick">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Background" Value="CadetBlue"/>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="150"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}" Width="170"/>
+                    <GridViewColumn Header="Level" DisplayMemberBinding="{Binding Level}" Width="150"/>
+                    <GridViewColumn Header="Cost" DisplayMemberBinding="{Binding Cost}" Width="150"/>
                 </GridView>
             </ListView.View>
         </ListView>

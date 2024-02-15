@@ -2,6 +2,7 @@
 using PL.Engineer;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,26 +30,45 @@ public partial class TaskWindow : Window
         get { return (BO.Task)GetValue(CurrentTaskProperty); }
         set { SetValue(CurrentTaskProperty, value); }
     }
-
     public static readonly DependencyProperty CurrentTaskProperty =
      DependencyProperty.Register("CurrentTask", typeof(BO.Task),
     typeof(TaskWindow), new PropertyMetadata(null));
 
+    public IEnumerable<BO.TaskInList> TaskList
+    {
+        get { return (IEnumerable<BO.TaskInList>)GetValue(TaskListProperty); }
+        set { SetValue(TaskListProperty, value); }
+    }
+    public static readonly DependencyProperty TaskListProperty =
+     DependencyProperty.Register("TaskList", typeof(IEnumerable<BO.TaskInList>),
+    typeof(TaskWindow), new PropertyMetadata(null));
+
+    public IEnumerable<BO.TaskInList> TaskDependencies
+    {
+        get { return (IEnumerable<BO.TaskInList>)GetValue(TaskDependenciesProperty); }
+        set { SetValue(TaskDependenciesProperty, value); }
+    }
+
+    public static readonly DependencyProperty TaskDependenciesProperty =
+        DependencyProperty.Register("TaskDependencies", typeof(IEnumerable<BO.TaskInList>), typeof(TaskWindow), new PropertyMetadata(null));
+
+    public int DepTask { get; set; } = 0;
+
     public TaskWindow(int id = 0)
     {
-        InitializeComponent();
 
-        if (id != 0)
-        {
-            try
+       try
+       {
+
+            if (id != 0)
             {
+
+
                 CurrentTask = s_bl!.Task.Read(id)!;
+
+
+          
             }
-            catch (Exception ex)
-            {
-                throw new Exception($"{ex.Message}");
-            }
-        }
         else
         {
             CurrentTask = new BO.Task()
@@ -67,7 +87,7 @@ public partial class TaskWindow : Window
                 Deliverables = "",
                 Remarks = "",
                 Engineer = new EngineerInTask()
-                {
+                { 
                     Id = 0,
                     Name = ""
                 },
@@ -76,6 +96,26 @@ public partial class TaskWindow : Window
                 IsActive=false
             };
         }
+            TaskDependencies = CurrentTask.Dependencies != null ? new ObservableCollection<BO.TaskInList>(CurrentTask.Dependencies) : new ObservableCollection<BO.TaskInList>();
+            var temp = s_bl?.Task.ReadAll().Select(x => new BO.TaskInList()
+            {
+                Id = x.Id,
+                Alias = x.Alias,
+                Description = x.Description,
+                Status = x.Status
+            }).ToList();
+
+            TaskList = temp != null ? new ObservableCollection<BO.TaskInList>(temp) : new ObservableCollection<BO.TaskInList>();
+
+       }
+       catch (Exception ex)
+       {
+            throw new Exception($"{ex.Message}");
+       }
+
+
+
+        InitializeComponent();
     }
 
     private void btnAddUpdate_Click(object sender, RoutedEventArgs e)
@@ -110,8 +150,40 @@ public partial class TaskWindow : Window
         }
     }
 
-    private void addDependency_Click(object sender, RoutedEventArgs e)
+    private void ComboBoxDepTasks_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        try
+        {
+            if (DepTask != 0)
+            {
+                MessageBoxResult result = MessageBox.Show("Do you want to add the selected item?", "Confirmation", MessageBoxButton.YesNo);
 
+                if (result == MessageBoxResult.Yes)
+                {
+                    BO.Task dep = s_bl.Task.Read(DepTask)!;
+                    if (CurrentTask!.Dependencies == null)
+                        CurrentTask.Dependencies = new List<TaskInList>();
+
+                    CurrentTask.Dependencies.Add(new BO.TaskInList()
+                    {
+                        Id = dep.Id,
+                        Alias = dep.Alias,
+                        Description = dep.Description,
+                        Status = dep.Status
+                    });
+
+
+                    TaskDependencies = new ObservableCollection<BO.TaskInList>(CurrentTask.Dependencies);
+                }
+                DepTask = 0;
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"{ex}", "Confirmation", MessageBoxButton.OK);
+        }
     }
+
+   
+   
 }

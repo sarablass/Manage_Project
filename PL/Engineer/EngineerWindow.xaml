@@ -10,7 +10,7 @@
     <Grid>
         <StackPanel Margin="20">
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">
-                <TextBlock Width="100" VerticalAlignment="Center">ID:</TextBlock>
+                <Label Width="100" Content="ID:" VerticalAlignment="Center"/> 
                 <TextBox IsEnabled="{Binding Id, Mode=OneTime, Converter={StaticResource ConvertIdToIsEnableKey}}"  Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true,  ValidatesOnExceptions=true}" Width="200" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60,15,0,10">

@@ -28,9 +28,25 @@
         </Grid>
         <ListView Margin="5" Grid.Row="1" ItemsSource="{Binding TaskList}" MouseDoubleClick="lvUpdate_MouseDoubleClick">
             <ListView.View>
+                
                 <GridView>
-                    <GridViewColumn/>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="GridViewColumnHeader">
+                            <Setter Property="Background" Value="CadetBlue"/>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="50"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" Width="120"/>
+                    <GridViewColumn Header="Alias" DisplayMemberBinding="{Binding Alias}" Width="100"/>
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Status}" Width="90"/>
+                    <GridViewColumn Header="Create At" DisplayMemberBinding="{Binding CreateAt}" Width="150"/>
+                    <GridViewColumn Header="Start Date" DisplayMemberBinding="{Binding StartDate}" Width="150"/>
+                    <GridViewColumn Header="Deadline" DisplayMemberBinding="{Binding DeadlineDate}" Width="150"/>
+                    <GridViewColumn Header="Complete Date" DisplayMemberBinding="{Binding CompleteDate}" Width="150"/>
+                    <GridViewColumn Header="Complexity Level" DisplayMemberBinding="{Binding ComplexityLevel}" Width="120"/>
+                    <GridViewColumn Header="Remarks" DisplayMemberBinding="{Binding Remarks}" Width="150"/>
                 </GridView>
+
             </ListView.View>
         </ListView>
         <Button Content="Add" Grid.Row="2" HorizontalAlignment="Center" Height="50" Width="100" Click="btnAdd_Click"/>
