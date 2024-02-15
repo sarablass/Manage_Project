@@ -81,9 +81,9 @@
 
         <Label Grid.Row="8" Grid.Column="2" Content="Choose dependency:" FontWeight="Bold" FontSize="15" Margin="18,10,0,3"/>
         <ComboBox Grid.Row="8" Grid.Column="3" ItemsSource="{Binding TaskList}"    
-          SelectedValue="{Binding DepTask, Mode=TwoWay}"
+          SelectedValue="{Binding CheckedDependTask, Mode=TwoWay}"
           SelectedValuePath="Id"
-          SelectionChanged="ComboBoxDepTasks_SelectionChanged">
+          SelectionChanged="cbCheckedDependTask_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

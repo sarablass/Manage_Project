@@ -17,38 +17,16 @@ internal class TaskImplementation : ITask
         return  new BO.MilestoneInTask() { Id = task.Id, Alias = task.Alias };
     }
 
-
-
-    //private IEnumerable<BO.TaskInList>? CalculateTaskInList(int id)
-    //{
-    //    List<DO.Dependency?> DependenciesList = _dal.Dependency.ReadAll(dependency => dependency?.DependentTask == id).ToList();  //Creating a list of all dependencies whose id of our current task equals the id of the dependent task.
-    //    List<DO.Task>? tasksList = null; //Initialize the list of relevant tasks.
-    //    foreach (DO.Dependency? dependency in DependenciesList) //A loop that goes through each of the dependencies.
-    //    {
-    //        tasksList?.Add(_dal.Task.Read((int)dependency?.DependsOnTask!)!); //Add the previous tasks to the list of relevant tasks.
-    //    }
-    //    IEnumerable<BO.TaskInList> TasksInList = //Allocating a list of type TaskInList.
-    //     from DO.Task doTask in tasksList! //For each task 
-    //     select new BO.TaskInList() //Create an object of type TaskInList.
-    //     {
-    //         Id = doTask.Id,
-    //         Description = doTask.Description!,
-    //         Alias = doTask.Alias!,
-    //         Status = CalculateStatus(doTask)
-    //     };
-    //    return TasksInList; //Return the TaskInList list.   
-    //}
-
     public List<TaskInList> CalculateTaskInList(int id)
     {
         var dependenciesList = _dal.Dependency.ReadAll(); //Creating a list of all dependencies whose id of our current task equals the id of the dependent task.
         //A loop that goes through each of the dependencies.
-        var dependentTasks = (from dependence in dependenciesList
-                              where dependence.DependentTask == id
-                              let taskDependOn = _dal.Task.Read(dependence.DependsOnTask)
-                              select new BO.TaskInList()
+        var dependentTasks = (from dependency in dependenciesList
+                              where dependency.DependentTask == id
+                              let taskDependOn = _dal.Task.Read(dependency.DependsOnTask)
+                              select new BO.TaskInList()//Create an object of type TaskInList.
                               {
-                                  Id = dependence.DependsOnTask,
+                                  Id = dependency.DependsOnTask,
                                   Description = taskDependOn?.Description,
                                   Alias = taskDependOn?.Alias,
                                   Status = CalculateStatus(taskDependOn)
@@ -74,24 +52,6 @@ internal class TaskImplementation : ITask
             return (BO.Status)4;//סיום
     }
 
-
-
-    //private BO.EngineerInTask? CalculateEngineer(DO.Task doTask)
-    //{      
-         
-    //    DO.Engineer engineer = _dal.Engineer.Read(doTask.Id)!;
-    //    if(engineer is null)
-    //        return null;
-    //    else
-    //    {
-    //        return new BO.EngineerInTask()
-    //        {
-    //            Id = engineer.Id,
-    //            Name = engineer.Name
-    //        };
-    //    }
-       
-    //}
 
     public int Create(BO.Task boTask)
     {

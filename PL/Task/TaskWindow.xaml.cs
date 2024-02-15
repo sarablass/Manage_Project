@@ -52,7 +52,7 @@ public partial class TaskWindow : Window
     public static readonly DependencyProperty TaskDependenciesProperty =
         DependencyProperty.Register("TaskDependencies", typeof(IEnumerable<BO.TaskInList>), typeof(TaskWindow), new PropertyMetadata(null));
 
-    public int DepTask { get; set; } = 0;
+    public int CheckedDependTask { get; set; } = 0;
 
     public TaskWindow(int id = 0)
     {
@@ -63,10 +63,10 @@ public partial class TaskWindow : Window
             {
                 CurrentTask = s_bl!.Task.Read(id)!;      
             }
-        else
-        {
-            CurrentTask = new BO.Task()
-            {
+             else
+             {
+                CurrentTask = new BO.Task()
+                {
                 Id = 0,
                 Description = "",
                 Alias = "",
@@ -88,10 +88,10 @@ public partial class TaskWindow : Window
                 ComplexityLevel = null,
                 Dependencies = null,
                 IsActive=false
-            };
-        }
+                };
+             }
             TaskDependencies = CurrentTask.Dependencies != null ? new ObservableCollection<BO.TaskInList>(CurrentTask.Dependencies) : new ObservableCollection<BO.TaskInList>();
-            var temp = s_bl?.Task.ReadAll().Select(x => new BO.TaskInList()
+            var task = s_bl?.Task.ReadAll().Select(x => new BO.TaskInList()
             {
                 Id = x.Id,
                 Alias = x.Alias,
@@ -99,42 +99,47 @@ public partial class TaskWindow : Window
                 Status = x.Status
             }).ToList();
 
-            TaskList = temp != null ? new ObservableCollection<BO.TaskInList>(temp) : new ObservableCollection<BO.TaskInList>();
+            TaskList = task != null ? new ObservableCollection<BO.TaskInList>(task) : new ObservableCollection<BO.TaskInList>();
 
        }
        catch (Exception ex)
        {
             throw new Exception($"{ex.Message}");
        }
-
-
-
         InitializeComponent();
     }
 
     private void btnAddUpdate_Click(object sender, RoutedEventArgs e)
     {
+        try
+        {
+            BO.Engineer? eng = s_bl.Engineer.Read(CurrentTask!.Engineer!.Id)!;
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"{ex.Message}", "Exception", MessageBoxButton.OK);
+        }
 
         if ((sender as Button)!.Content.ToString() == "Add")
-        {
+        {          
             try
-            {
-                s_bl.Task.Create(CurrentTask!);
-                MessageBox.Show("The addition was made successfully", "Confirmation", MessageBoxButton.OK);
-                this.Close();
+            {                            
+               s_bl.Task.Create(CurrentTask!);
+               MessageBox.Show("The addition was made successfully", "Confirmation", MessageBoxButton.OK);
+               this.Close();                 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message}", "Confirmation", MessageBoxButton.OK);
+                MessageBox.Show($"{ex.Message}", "Exception", MessageBoxButton.OK);
             }
         }
         else
         {
             try
             {
-                s_bl.Task.Update(CurrentTask!);
-                MessageBox.Show("The update was successful", "Confirmation", MessageBoxButton.OK);
-                this.Close();
+              s_bl.Task.Update(CurrentTask!);
+              MessageBox.Show("The update was successful", "Confirmation", MessageBoxButton.OK);
+              this.Close();
             }
             catch (Exception ex)
             {
@@ -144,32 +149,32 @@ public partial class TaskWindow : Window
         }
     }
 
-    private void ComboBoxDepTasks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private void cbCheckedDependTask_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         try
         {
-            if (DepTask != 0)
+            if (CheckedDependTask != 0)
             {
-                MessageBoxResult result = MessageBox.Show("Do you want to add the selected item?", "Confirmation", MessageBoxButton.YesNo);
+                MessageBoxResult ans = MessageBox.Show("Are you sure you want to add the dependency?", "Confirmation", MessageBoxButton.YesNo);
 
-                if (result == MessageBoxResult.Yes)
+                if (ans == MessageBoxResult.Yes)
                 {
-                    BO.Task dep = s_bl.Task.Read(DepTask)!;
+                    BO.Task dependency = s_bl.Task.Read(CheckedDependTask)!;
                     if (CurrentTask!.Dependencies == null)
                         CurrentTask.Dependencies = new List<TaskInList>();
 
                     CurrentTask.Dependencies.Add(new BO.TaskInList()
                     {
-                        Id = dep.Id,
-                        Alias = dep.Alias,
-                        Description = dep.Description,
-                        Status = dep.Status
+                        Id = dependency.Id,
+                        Alias = dependency.Alias,
+                        Description = dependency.Description,
+                        Status = dependency.Status
                     });
 
 
                     TaskDependencies = new ObservableCollection<BO.TaskInList>(CurrentTask.Dependencies);
                 }
-                DepTask = 0;
+                CheckedDependTask = 0;
             }
         }
         catch (Exception ex)
