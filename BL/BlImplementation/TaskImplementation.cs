@@ -1,6 +1,7 @@
 ﻿using BlApi;
 using BO;
 using DO;
+using System.Threading.Tasks;
 
 namespace BlImplementation;
 
@@ -155,6 +156,8 @@ internal class TaskImplementation : ITask
 
     public IEnumerable<BO.Task> ReadAll(Func<BO.Task, bool>? filter = null)
     {
+        try
+        {      
         IEnumerable<BO.Task?> tasksList =
            from DO.Task doTask in _dal.Task.ReadAll()
            let taskEngineer = _dal.Engineer.ReadAll(engineer => doTask.EngineerId == engineer.Id).FirstOrDefault()
@@ -182,9 +185,15 @@ internal class TaskImplementation : ITask
                Dependencies = (List<BO.TaskInList>)CalculateTaskInList(doTask.Id)!,
                IsActive = doTask.Active
            };
-        if (filter == null)
-            return tasksList!;
-        return tasksList.Where(filter!)!;
+       
+           if (filter == null)
+              return tasksList!;
+           return tasksList.Where(filter!)!;
+        }
+        catch (DO.DalDoesNotExistException ex)
+        {
+            throw new BO.BlDoesNotExistException(ex.Message);
+        }
     }
 
     public void Update(BO.Task boTask)
@@ -195,7 +204,18 @@ internal class TaskImplementation : ITask
         DO.Task doTask = new DO.Task
         (boTask.Id, boTask.Description!, boTask.Alias!, false, boTask.CompleteDate - boTask.StartDate, boTask.CreateAt, boTask.StartDate, boTask.BaselineStartDate, boTask.DeadlineDate, boTask.CompleteDate, boTask.Deliverables, boTask.Remarks, boTask.Engineer!.Id, (DO.EngineerExperience)boTask.ComplexityLevel!, boTask.IsActive);
         try
-        {
+        {         
+            if (boTask.Dependencies != null)
+            {
+                var dependenciesList = boTask.Dependencies!
+                   .Select(task => new DO.Dependency
+                   {
+                       DependentTask = boTask.Id,
+                       DependsOnTask = task.Id
+                   })
+                   .ToList();
+                dependenciesList.ForEach(dependency => _dal.Dependency.Create(dependency));
+            }
             _dal.Task.Update(doTask);
         }
         catch (DO.DalDoesNotExistException ex)

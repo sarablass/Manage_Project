@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfEngineer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Engineer>
-    <Id>326811727</Id>
-    <Name>Sara Blass</Name>
-    <Email>saraBlass@gmail.com</Email>
-    <Level>Advanced</Level>
-    <Cost>1000</Cost>
-    <Active>true</Active>
-  </Engineer>
-  <Engineer>
-    <Id>273371482</Id>
-    <Name>Brachi Kim</Name>
-    <Email>Brachikim@gmail.com</Email>
-    <Level>Intermediate</Level>
-    <Cost>700</Cost>
-    <Active>true</Active>
-  </Engineer>
-  <Engineer>
     <Id>297286079</Id>
     <Name>Ruti Leybuvi</Name>
     <Email>ruti@gmail.com</Email>
@@ -319,5 +303,37 @@
     <Level>Advanced</Level>
     <Cost>1000</Cost>
     <Active>true</Active>
+  </Engineer>
+  <Engineer>
+    <Id>326811727</Id>
+    <Name>Sara Blass</Name>
+    <Email>saraBlass@gmail.com</Email>
+    <Level>AdvancedBeginner</Level>
+    <Cost>1000</Cost>
+    <Active>false</Active>
+  </Engineer>
+  <Engineer>
+    <Id>273371482</Id>
+    <Name>Brachi Kim</Name>
+    <Email>Brachikim@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>700</Cost>
+    <Active>false</Active>
+  </Engineer>
+  <Engineer>
+    <Id>324567455</Id>
+    <Name>dddffgh</Name>
+    <Email>swer@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>400</Cost>
+    <Active>false</Active>
+  </Engineer>
+  <Engineer>
+    <Id>343565768</Id>
+    <Name>hhhh</Name>
+    <Email>hhh@gmail.com</Email>
+    <Level>Intermediate</Level>
+    <Cost>300</Cost>
+    <Active>false</Active>
   </Engineer>
 </ArrayOfEngineer>

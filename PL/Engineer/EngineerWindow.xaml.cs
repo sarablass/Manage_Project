@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,24 +36,35 @@ namespace PL.Engineer
 
         public EngineerWindow(int id = 0)
         {
-            InitializeComponent();
-
-            if (id != 0)
+            try
             {
-                try
+                if (id != 0)
                 {
                     CurrentEngineer = s_bl!.Engineer.Read(id)!;
                 }
-                catch (Exception ex)
+                else
                 {
-                    throw new Exception($"{ex}");
+                    CurrentEngineer = new BO.Engineer()
+                    {
+                        Id = 0,
+                        Name="",
+                        IsActive = false,
+                        Email="",
+                        Level=null,
+                        Cost=0,
+                        Task = new TaskInEngineer()
+                        {
+                           Id = 0,
+                           Alias = ""
+                        }
+                    };
                 }
+            }        
+             catch (Exception ex)
+            {   
+                throw new Exception($"{ex.Message}");
             }
-            else
-            {
-                CurrentEngineer = new BO.Engineer();
-            }
-
+            InitializeComponent();
         }
 
         private void btnAddUpdate_Click(object sender, RoutedEventArgs e)
@@ -68,7 +80,7 @@ namespace PL.Engineer
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"{ex}", "Confirmation", MessageBoxButton.OK);
+                    MessageBox.Show($"{ex.Message}", "Confirmation", MessageBoxButton.OK);
                 }
             }
             else
@@ -81,7 +93,7 @@ namespace PL.Engineer
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"{ex}", "Confirmation", MessageBoxButton.OK);
+                    MessageBox.Show($"{ex.Message}", "Exception", MessageBoxButton.OK);
 
                 }
             }

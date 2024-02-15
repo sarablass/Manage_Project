@@ -59,15 +59,9 @@ public partial class TaskWindow : Window
 
        try
        {
-
             if (id != 0)
             {
-
-
-                CurrentTask = s_bl!.Task.Read(id)!;
-
-
-          
+                CurrentTask = s_bl!.Task.Read(id)!;      
             }
         else
         {
