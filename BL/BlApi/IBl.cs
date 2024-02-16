@@ -1,6 +1,6 @@
 ﻿namespace BlApi;
 /// <summary>
-/// 
+/// General interface of all entities.
 /// </summary>
 public interface IBl
 {

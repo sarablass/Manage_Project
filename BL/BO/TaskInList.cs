@@ -1,10 +1,11 @@
 ﻿namespace BO;
 
-public class TaskInList
+public class TaskInList // Declaring a class to represent a task in a list
 {
-    public int Id { get; init; }
-    public string? Description { get; set; }
-    public string? Alias { get; set; }
-    public Status? Status { get; set; }
-    public override string ToString() => this.ToStringProperty();
+    public int Id { get; init; } //ID of the task
+    public string? Description { get; set; } //description of the task (nullable)
+    public string? Alias { get; set; } //alias of the task (nullable)
+    public Status? Status { get; set; } //status of the task (nullable)
+    public override string ToString() => this.ToStringProperty(); //Method to override the ToString() method and return a string representation of the task
+
 }

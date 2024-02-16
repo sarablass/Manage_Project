@@ -1,95 +1,144 @@
 ﻿using BlApi;
-namespace BlImplementation;
-
-internal class EngineerImplementation : IEngineer
+namespace BlImplementation
 {
-    private DalApi.IDal _dal = DalApi.Factory.Get;
-
-    public int Create(BO.Engineer boEngineer)
+    /// <summary>
+    /// Implementation of the IEngineer interface.
+    /// </summary>
+    internal class EngineerImplementation : IEngineer
     {
+        private DalApi.IDal _dal = DalApi.Factory.Get; // Instance of the dal.
 
-        //try?
-        BO.Tools.ValidationId(boEngineer.Id);
-        BO.Tools.ValidationString(boEngineer.Name!);
-        BO.Tools.ValidationEmail(boEngineer.Email!);
-        BO.Tools.ValidationCost((double)boEngineer.Cost!);
-
-        DO.Engineer doEngineer = new DO.Engineer
-         (boEngineer.Id, boEngineer.Name!, boEngineer.Email!, (DO.EngineerExperience)boEngineer.Level!, (double)boEngineer.Cost!, boEngineer.IsActive);
-
-        try
+        /// <summary>
+        /// Creates a new engineer.
+        /// </summary>
+        /// <param name="boEngineer">The engineer object to create.</param>
+        /// <returns>The ID of the new created engineer.</returns>
+        public int Create(BO.Engineer boEngineer)
         {
-            int idEng = _dal.Engineer.Create(doEngineer);
-            return idEng;
+            // Validate engineer properties.
+            BO.Tools.ValidationId(boEngineer.Id);
+            BO.Tools.ValidationString(boEngineer.Name!);
+            BO.Tools.ValidationEmail(boEngineer.Email!);
+            BO.Tools.ValidationCost((double)boEngineer.Cost!);
+
+            // Map BO.Engineer to DO.Engineer.
+            DO.Engineer doEngineer = new DO.Engineer(
+                boEngineer.Id,
+                boEngineer.Name!,
+                boEngineer.Email!,
+                (DO.EngineerExperience)boEngineer.Level!,
+                (double)boEngineer.Cost!,
+                boEngineer.IsActive
+            );
+            // Create the engineer in the dal.
+            try
+            {
+                int idEng = _dal.Engineer.Create(doEngineer);
+                return idEng;// Returning the id of the new engineer.
+            }
+            catch (DO.DalAlreadyExistsException ex)// Throwing an exception in case such an engineer already exists.
+            {
+                throw new BO.BlAlreadyExistsException($"Engineer with ID={boEngineer.Id} already exists", ex);
+            }
         }
-        catch (DO.DalAlreadyExistsException ex)
+
+        /// <summary>
+        /// Deletes an engineer with the specified ID.
+        /// </summary>
+        /// <param name="id">The ID of the engineer to delete.</param>
+        public void Delete(int id)
         {
-            throw new BO.BlAlreadyExistsException($"Engineer with ID={boEngineer.Id} already exists", ex);
+            throw new BO.BlDeletionImpossible($"Engineer with ID={id} cannot be deleted");// An exception throw that cannot be deleted from an engineer.
         }
-    }
 
-    public void Delete(int id)
-    {
-        throw new BO.BlDeletionImpossible($"Engineer with ID={id} cannot be deleted");
-    }
-
-    public BO.Engineer? Read(int id)
-    {
-        DO.Engineer? doEngineer = _dal.Engineer.Read(id);
-        if (doEngineer is null)
-            throw new BO.BlDoesNotExistException($"Engineer with ID={id} does Not exist");
-
-        DO.Task task = _dal.Task.ReadAll().FirstOrDefault(task => task?.EngineerId == doEngineer.Id)!;
-        return new BO.Engineer()
+        /// <summary>
+        /// Reads an engineer with the specified ID.
+        /// </summary>
+        /// <param name="id">The ID of the engineer to read.</param>
+        /// <returns>The engineer object.</returns>
+        public BO.Engineer? Read(int id)
         {
-            Id = doEngineer.Id,
-            Name = doEngineer.Name,
-            Email = doEngineer.Email,
-            Level = (BO.EngineerExperience)doEngineer.Level!,
-            Cost = (double)doEngineer.Cost!,
-            Task = task != null ? new BO.TaskInEngineer()
-            { Id = task!.Id, Alias = task.Alias! } : null
-        };
-    }
+            // Read engineer from the dal.
+            DO.Engineer? doEngineer = _dal.Engineer.Read(id);
 
-    public IEnumerable<BO.Engineer> ReadAll(Func<BO.Engineer, bool>? filter = null)
-    {
-        
-           IEnumerable<BO.Engineer?> boEngineersList =
-           from DO.Engineer doEngineer in _dal.Engineer.ReadAll()
-           let task = _dal.Task.ReadAll(task => task?.EngineerId == doEngineer.Id).FirstOrDefault()
-           select new BO.Engineer()
-           {
-               Id = doEngineer.Id,
-               Name = doEngineer.Name,
-               Email = doEngineer.Email,
-               Level = (BO.EngineerExperience)doEngineer.Level!,
-               Cost = (double)doEngineer.Cost!,
-               Task = task != null? new BO.TaskInEngineer()
-               { Id = task!.Id, Alias = task.Alias! }:null
-           };
-        if (filter is null)
-            return boEngineersList!;
-        return boEngineersList.Where(filter!)!;
-    }
+            // If engineer does not exist, throw exception.
+            if (doEngineer is null)
+                throw new BO.BlDoesNotExistException($"Engineer with ID={id} does not exist");
 
-    public void Update(BO.Engineer boEngineer)
-    {
-        //try?
-        BO.Tools.ValidationId(boEngineer.Id);
-        BO.Tools.ValidationString(boEngineer.Name!);
-        BO.Tools.ValidationEmail(boEngineer.Email!);
-        BO.Tools.ValidationCost((double)boEngineer.Cost!);
+            // Read task associated with the engineer.
+            DO.Task task = _dal.Task.ReadAll().FirstOrDefault(task => task?.EngineerId == doEngineer.Id)!;
 
-        DO.Engineer doEngineer = new DO.Engineer
-         (boEngineer.Id, boEngineer.Name!, boEngineer.Email!, (DO.EngineerExperience)boEngineer.Level!, (double)boEngineer.Cost!, boEngineer.IsActive);
-        try
-        {
-            _dal.Engineer.Update(doEngineer);
+            // Map DO.Engineer to BO.Engineer.
+            return new BO.Engineer()
+            {
+                Id = doEngineer.Id,
+                Name = doEngineer.Name,
+                Email = doEngineer.Email,
+                Level = (BO.EngineerExperience)doEngineer.Level!,
+                Cost = (double)doEngineer.Cost!,
+                Task = task != null ? new BO.TaskInEngineer()
+                { Id = task!.Id, Alias = task.Alias! } : null
+            };
         }
-        catch (DO.DalDoesNotExistException ex)
+
+        /// <summary>
+        /// Reads all engineers optionally filtered by a predicate.
+        /// </summary>
+        /// <param name="filter">Optional predicate to filter engineers.</param>
+        /// <returns>A collection of engineers.</returns>
+        public IEnumerable<BO.Engineer> ReadAll(Func<BO.Engineer, bool>? filter = null)
         {
-            throw new BO.BlDoesNotExistException(ex.Message);
+            // Converting the engineers from the dl to bl.
+            IEnumerable<BO.Engineer?> boEngineersList =
+                from DO.Engineer doEngineer in _dal.Engineer.ReadAll()
+                let task = _dal.Task.ReadAll(task => task?.EngineerId == doEngineer.Id).FirstOrDefault()
+                select new BO.Engineer()
+                {
+                    Id = doEngineer.Id,
+                    Name = doEngineer.Name,
+                    Email = doEngineer.Email,
+                    Level = (BO.EngineerExperience)doEngineer.Level!,
+                    Cost = (double)doEngineer.Cost!,
+                    Task = task != null ? new BO.TaskInEngineer()
+                    { Id = task!.Id, Alias = task.Alias! } : null
+                };
+
+            // Apply filter if provided.
+            if (filter is null)
+                return boEngineersList!;
+            return boEngineersList.Where(filter!)!;
+        }
+
+        /// <summary>
+        /// Updates an existing engineer.
+        /// </summary>
+        /// <param name="boEngineer">The engineer object to update.</param>
+        public void Update(BO.Engineer boEngineer)
+        {
+            // Validate engineer properties.
+            BO.Tools.ValidationId(boEngineer.Id);
+            BO.Tools.ValidationString(boEngineer.Name!);
+            BO.Tools.ValidationEmail(boEngineer.Email!);
+            BO.Tools.ValidationCost((double)boEngineer.Cost!);
+
+            // Map BO.Engineer to DO.Engineer. 
+            DO.Engineer doEngineer = new DO.Engineer(
+                boEngineer.Id,
+                boEngineer.Name!,
+                boEngineer.Email!,
+                (DO.EngineerExperience)boEngineer.Level!,
+                (double)boEngineer.Cost!,
+                boEngineer.IsActive
+            );
+            // Update the engineer in the dal.
+            try
+            {
+                _dal.Engineer.Update(doEngineer);
+            }
+            catch (DO.DalDoesNotExistException ex) // throw exception if engineer does not exist.
+            {
+                throw new BO.BlDoesNotExistException(ex.Message);
+            }
         }
     }
 }

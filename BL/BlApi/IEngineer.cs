@@ -1,6 +1,6 @@
 ﻿namespace BlApi;
 /// <summary>
-/// 
+/// A engineer interface with actions: adding a engineer, reading a engineer, reading engineers, updating a engineer and deleting a engineer.
 /// </summary>
 public interface IEngineer
 {

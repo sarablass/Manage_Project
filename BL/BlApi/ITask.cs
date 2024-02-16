@@ -1,7 +1,7 @@
 ﻿
 namespace BlApi;
 /// <summary>
-/// 
+/// A task interface with actions: adding a task, reading a task, reading tasks, updating a task and deleting a task.
 /// </summary>
 public interface ITask
 {

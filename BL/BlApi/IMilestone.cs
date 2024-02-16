@@ -1,6 +1,6 @@
 ﻿namespace BlApi;
 /// <summary>
-/// 
+/// A milestone interface with actions: adding a milestone, reading a milestone and updating a milestone.
 /// </summary>
 public interface IMilestone
 {
