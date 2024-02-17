@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using System.Collections;
-
 namespace PL;
-
 internal class EngineerExperiencesCollection : IEnumerable
 {
     static readonly IEnumerable<BO.EngineerExperience> s_enums =

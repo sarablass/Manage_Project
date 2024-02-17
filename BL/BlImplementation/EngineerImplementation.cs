@@ -6,7 +6,7 @@ namespace BlImplementation
     /// </summary>
     internal class EngineerImplementation : IEngineer
     {
-        private DalApi.IDal _dal = DalApi.Factory.Get; // Instance of the dal.
+        private DalApi.IDal _dal = DalApi.Factory.Get; //Instance of the dal.
 
         /// <summary>
         /// Creates a new engineer.
@@ -103,7 +103,7 @@ namespace BlImplementation
                     { Id = task!.Id, Alias = task.Alias! } : null
                 };
 
-            // Apply filter if provided.
+            // Apply filter if provided
             if (filter is null)
                 return boEngineersList!;
             return boEngineersList.Where(filter!)!;
